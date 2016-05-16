@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.artificialintelligence.dao.machinelearning.ArticleDao">
+     
+     <!-- 查询算法 -->
+    <select id="queryArticlebyAlgorithmId" parameterType="int" resultType="com.artificialintelligence.machinelearning.model.ArticleModel">
+        select id, name,  description, location, algorithm_id as algorithmId,
+        create_tm as createTm, modify_tm as modifyTm from article where algorithm_id=#{id}
+    </select>
+    
+         <!-- 查询算法 -->
+    <select id="queryArticlebyArticleId" parameterType="int" resultType="com.artificialintelligence.machinelearning.model.ArticleModel">
+        select id, name,  description, location, algorithm_id as algorithmId,
+        create_tm as createTm, modify_tm as modifyTm from article where id=#{id}
+    </select>
+</mapper>

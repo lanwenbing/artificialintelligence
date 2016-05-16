@@ -1,0 +1,10 @@
+@CHARSET "ISO-8859-1";
+
+.description{
+	text-indent:2em;
+}
+
+.category .subtitle{
+	font-size:25px;
+	margin-top:10px;
+}

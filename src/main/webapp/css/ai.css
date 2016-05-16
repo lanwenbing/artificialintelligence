@@ -1,0 +1,19 @@
+@CHARSET "ISO-8859-1";
+
+body {
+	font-family: sans-serif;
+	margin-left:200px;
+	margin-right:200px;
+	margin-top:60px;
+	line-height:28px;
+}
+
+body .introduction{
+	text-indent:2em;
+}
+
+body .title {
+	font-size:50px;
+	text-align: center;
+	margin-bottom: 30px;
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.artificialintelligence.dao.machinelearning.CategoryDao">
+
+    <!-- 查询一个系统 -->
+    <select id="getCategory" resultType="com.artificialintelligence.machinelearning.model.CategoryModel">
+        select id, name, description,content from category c
+    </select> 
+    <select id="queryCategory" parameterType="int" resultType="com.artificialintelligence.machinelearning.model.CategoryModel">
+        select id, name, description,content from category c where id=#{id}
+    </select>
+</mapper>

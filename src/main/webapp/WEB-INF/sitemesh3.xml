@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sitemesh>
+<mapping path="/*" decorator="/WEB-INF/common/maindecorator.jsp"></mapping>
+<mapping path="*article/insertComment*" exclude="true" />
+<mapping path="*material/insertComment*" exclude="true" />
+<mapping path="*system/insertComment*" exclude="true" />
+</sitemesh>
