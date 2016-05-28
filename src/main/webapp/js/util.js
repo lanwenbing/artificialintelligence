@@ -46,3 +46,4 @@ Date.prototype.pattern=function(fmt) {
 var getLocalTime = function(nS) {     
 	return new Date(parseInt(nS) * 1000).toLocaleString(); 
 }
+

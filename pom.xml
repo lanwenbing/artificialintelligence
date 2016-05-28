@@ -72,7 +72,6 @@
         <artifactId>spring-context-support</artifactId>  
         <version>${spring.version}</version>  
     </dependency>  
-
     <dependency>  
         <groupId>org.springframework</groupId>  
         <artifactId>spring-test</artifactId>  
@@ -168,7 +167,12 @@
         <groupId>commons-io</groupId>  
         <artifactId>commons-io</artifactId>  
         <version>2.4</version>  
-    </dependency>  
+    </dependency>
+    <dependency>
+	    <groupId>commons-collections</groupId>
+	    <artifactId>commons-collections</artifactId>
+	    <version>20040616</version>
+	</dependency>   
     <dependency>  
         <groupId>commons-codec</groupId>  
         <artifactId>commons-codec</artifactId>  
@@ -178,35 +182,71 @@
 	    <groupId>org.sitemesh</groupId>
 	    <artifactId>sitemesh</artifactId>
 	    <version>3.0.0</version>
-	</dependency>  
+	</dependency>
+	<!-- jasperreport -->  
 	<dependency>  
       <groupId>org.jaspersoft</groupId>  
       <artifactId>jasperreports</artifactId>  
       <version>6.2.1</version>  
       <scope>system</scope>  
-      <systemPath>C:\machineLearning\artificialIntelligence\src\main\webapp\WEB-INF\lib\jasperreports-6.2.1.jar</systemPath>  
+      <systemPath>D:\ArtificialIntelligence\ai\src\main\webapp\WEB-INF\lib\jasperreports-6.2.1.jar</systemPath>  
     </dependency>
     <dependency>  
       <groupId>org.jaspersoft</groupId>  
       <artifactId>jasperreports-fonts</artifactId>  
       <version>6.2.1</version>  
       <scope>system</scope>  
-      <systemPath>C:\machineLearning\artificialIntelligence\src\main\webapp\WEB-INF\lib\jasperreports-fonts-6.2.1.jar</systemPath>  
+      <systemPath>D:\ArtificialIntelligence\ai\src\main\webapp\WEB-INF\lib\jasperreports-fonts-6.2.1.jar</systemPath>  
     </dependency>
     <dependency>  
       <groupId>org.jaspersoft</groupId>  
       <artifactId>jasperreports-javaflow</artifactId>  
       <version>6.2.1</version>  
       <scope>system</scope>  
-      <systemPath>C:\machineLearning\artificialIntelligence\src\main\webapp\WEB-INF\lib\jasperreports-javaflow-6.2.1.jar</systemPath>  
+      <systemPath>D:\ArtificialIntelligence\ai\src\main\webapp\WEB-INF\lib\jasperreports-javaflow-6.2.1.jar</systemPath>  
     </dependency>
     <dependency>  
       <groupId>org.jaspersoft</groupId>  
       <artifactId>jasperreports-functions</artifactId>  
       <version>6.2.1</version>  
       <scope>system</scope>  
-      <systemPath>C:\machineLearning\artificialIntelligence\src\main\webapp\WEB-INF\lib\jasperreports-functions-6.2.1.jar</systemPath>  
-    </dependency> 
+      <systemPath>D:\ArtificialIntelligence\ai\src\main\webapp\WEB-INF\lib\jasperreports-functions-6.2.1.jar</systemPath>  
+    </dependency>
+    <dependency>
+	   <groupId>groovy</groupId>
+	   <artifactId>groovy-all</artifactId>
+	   <version>1.1-rc-1</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.apache.poi</groupId>
+	    <artifactId>poi</artifactId>
+	    <version>3.14</version>
+	</dependency>
+	<dependency>
+	    <groupId>com.lowagie</groupId>
+	    <artifactId>itext</artifactId>
+	    <version>4.2.2</version>
+	</dependency>
+	<dependency>
+	    <groupId>commons-digester</groupId>
+	    <artifactId>commons-digester</artifactId>
+	    <version>2.1</version>
+	</dependency>
+	<dependency>
+	    <groupId>joda-time</groupId>
+	    <artifactId>joda-time</artifactId>
+	    <version>2.9.4</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.eclipse.birt.runtime.3_7_1</groupId>
+	    <artifactId>com.lowagie.text</artifactId>
+	    <version>2.1.7</version>
+	</dependency>
+	<dependency>
+	    <groupId>org.codehaus.groovy</groupId>
+	    <artifactId>groovy</artifactId>
+	    <version>2.4.6</version>
+	</dependency>
   </dependencies>
   <build>  
     <plugins>  

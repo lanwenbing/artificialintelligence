@@ -1,4 +1,4 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -11,7 +11,8 @@
 <script src="../../js/util.js"></script>
 </head>
 <body>
-<div class="download"><a href="../../report/displayreport.do">下载</a></div>
+<div class="download" id="download"><a>下载</a></div>
+<input type="hidden" name="srctype" value="" id="srctype">
 <div class="title"><c:out value="${article.name}"/></div>
 <div class="introduction"><c:out value="${article.description}" escapeXml="false"/></div>
 <div>
@@ -70,6 +71,27 @@
     	                	}
     	                };
     	            });
+    	        });
+    	    }
+    	);
+    require(["dojo/dom", "dojo/on", "dojo/request", "dojo/dom-form", "dojo/json"],
+    	    function(dom, on, request, domForm, JSON){
+
+    	        var download = dom.byId('download');
+    	        var srctype = dom.byId('srctype');
+    	        // Attach the onsubmit event handler of the form
+    	        on(download, "click", function(evt){
+
+    	            // prevent the page from navigating after submit
+    	            evt.stopPropagation();
+    	            evt.preventDefault();
+    	            
+    	            var param = 'reqname=articleName';
+    				param += '&srctype=' + srctype.value;
+    				param += '&reporttype=2';
+    				param += '&article_name='+'${article.name}';
+    				var popupUrl = "../../report/displayreport.do?" + param;
+    	            window.open(popupUrl,"SpreadSheet",'toolbar=yes,location=yes,directories=yes,status=yes,menubar=yes,scrollbars=yes,copyhistory=yes,resizable=yes,height=750,width=1250');
     	        });
     	    }
     	);

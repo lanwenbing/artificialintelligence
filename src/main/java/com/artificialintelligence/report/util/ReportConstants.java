@@ -26,7 +26,7 @@ public class ReportConstants {
 	
 	public static final String ENGINETYPE_JASPER = "jasper";
 
-	public static final String REQJRXMLPROPSFILE="resource.reports.reqjrxml";
+	public static final String REQJRXMLPROPSFILE="messages.reports.reqjrxml";
 	
 	public static final String PRINTER_NAME = "PRINTER_NAME";
 	public static final String RESOURCE_PCKG=".report.";
@@ -56,7 +56,7 @@ public class ReportConstants {
 	public static final String VITUALFILESSTOREPATH="VITUALFILESSTOREPATH";
 	public static final String JASPERFILESSTOREPATH="JASPERFILESSTOREPATH";
 	public static final String JASPERCSVPATH1="JASPERCSVPATH1";
-	public static final String CMPLUS_ENV="cmplus_env";
+	public static final String AI_ENV="ai_env";
 
 	
 	public static final String CHINESE="zh_TW";//Refcode for local and english
@@ -71,9 +71,9 @@ public class ReportConstants {
 	
 	
 	//properties file for the jrxml files. To enable multilingual support
-	public static final String JASPER_LABELS_EN ="resource.reports.jasperLabels_en_EN";
-	public static final String JASPER_LABELS_CHINESE ="resource.reports.jasperLabels_zh_TW";
-	public static final String JASPER_LABELS_CHINESE_CHINESE ="resource.reports.jasperLabels_zh_CN";
+	public static final String JASPER_LABELS_EN ="messages.reports.jasperLabels_en_EN";
+	public static final String JASPER_LABELS_CHINESE ="messages.reports.jasperLabels_zh_TW";
+	public static final String JASPER_LABELS_CHINESE_CHINESE ="messages.reports.jasperLabels_zh_CN";
 	
 	public static final String JRXML="jrxml";
 	public static final String CSV="csv";

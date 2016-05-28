@@ -59,17 +59,18 @@ import net.sf.jasperreports.engine.util.JRSwapFile;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import com.artificialintelligence.core.util.BeanUtils;
 import com.artificialintelligence.dao.machinelearning.util.DBUtil;
 import com.artificialintelligence.dao.machinelearning.util.PropertyUtil;
-import com.artificialintelligence.dao.machinelearning.util.Util;
 import com.artificialintelligence.report.util.IReportEngine;
 import com.artificialintelligence.report.util.JRCSVDataSource;
 import com.artificialintelligence.report.util.JasperReportEngine;
 import com.artificialintelligence.report.util.ReportConstants;
 import com.artificialintelligence.report.util.ReportQueries;
-import com.artificialintelligence.report.util.ReportUtil;
 
 /**
  * The Manager class is responsible for all the following operations.
@@ -82,11 +83,14 @@ import com.artificialintelligence.report.util.ReportUtil;
  * @author Uma.K
  * @version 1.0
  */
-
+@Component
+@Scope("prototype") 
 public class ReportManager implements IReportManager {
 	
     
 	private static final Log log = LogFactory.getLog(ReportManager.class);
+	
+	@Autowired
 	private static JasperReport mJasperReport;
 	private String mSelPrinterName;
 	private int mSelCopies;
@@ -299,7 +303,7 @@ public class ReportManager implements IReportManager {
 		String lFileName = null == fileName ? lDefaultFileName : fileName;
 
 		JasperPrint lJasperPrint = getJasperFileToStore(pReportObject);
-		String storePath = PropertyUtil.getProperty(ReportConstants.JASPERFILESSTOREPATH, ReportConstants.CMPLUS_ENV);
+		String storePath = PropertyUtil.getProperty(ReportConstants.JASPERFILESSTOREPATH, ReportConstants.AI_ENV);
 
 		if (pReportObject.getMReportType().equalsIgnoreCase(ReportConstants.PDF_REFCD)) {
 			storeAsPdf(lJasperPrint, lFileName, storePath);
@@ -626,7 +630,7 @@ public class ReportManager implements IReportManager {
 	 * @throws IOException
 	 */
 	private String getDefaultPinter() throws IOException {
-		ResourceBundle rb = ResourceBundle.getBundle(ReportConstants.CMPLUS_ENV);
+		ResourceBundle rb = ResourceBundle.getBundle(ReportConstants.AI_ENV);
 		String propPath = rb.getString("PAGE_DEFINITION_PATH");
 		String resourcePath = ReportConstants.RESOURCE_PCKG.replace(".", "/");
 		resourcePath = propPath + resourcePath;
@@ -645,7 +649,7 @@ public class ReportManager implements IReportManager {
 	private String getJasperFilePath() throws IOException {
 		String path = null;
 		isDebugEnabled("Fetching the jasperfilepath........constant file entry:::" + ReportConstants.JASPERFILESPATH);
-		path = PropertyUtil.getProperty(ReportConstants.JASPERFILESPATH, ReportConstants.CMPLUS_ENV);
+		path = PropertyUtil.getProperty(ReportConstants.JASPERFILESPATH, ReportConstants.AI_ENV);
 		isDebugEnabled("The file path is..........." + path);
 		return path;
 	}
@@ -653,7 +657,7 @@ public class ReportManager implements IReportManager {
 	private String getVitualStorePath() throws IOException {
 		String path = null;
 		log.debug("Fetching the virtualfilepath........constant file entry:::" + ReportConstants.VITUALFILESSTOREPATH);
-		path = PropertyUtil.getProperty(ReportConstants.VITUALFILESSTOREPATH, ReportConstants.CMPLUS_ENV);
+		path = PropertyUtil.getProperty(ReportConstants.VITUALFILESSTOREPATH, ReportConstants.AI_ENV);
 		log.debug("The file path is..........." + path);
 		return path.trim();
 	}
@@ -667,7 +671,7 @@ public class ReportManager implements IReportManager {
 		String path = null;
 		log.debug("Fetching the csvpath........constant file entry:::" + ReportConstants.JASPERCSVPATH1);
 		try {
-			path = PropertyUtil.getProperty(ReportConstants.JASPERCSVPATH1, ReportConstants.CMPLUS_ENV);
+			path = PropertyUtil.getProperty(ReportConstants.JASPERCSVPATH1, ReportConstants.AI_ENV);
 		} catch (IOException e) {
 			log.error("Error getting the csv file :: " + e.getMessage(), e);
 		}

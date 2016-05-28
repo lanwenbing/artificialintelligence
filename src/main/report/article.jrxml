@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.1.1.final using JasperReports Library version 6.1.1  -->
+<!-- 2016-05-28T09:49:35 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="article" language="groovy" pageWidth="595" pageHeight="790" whenNoDataType="AllSectionsNoDetail" columnWidth="523" leftMargin="36" rightMargin="36" topMargin="72" bottomMargin="72" >
+	<property name="ireport.zoom" value="1.9487171000000096"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="54"/>
+	<property name="ireport.scriptlethandling" value="0"/>
+	<property name="ireport.encoding" value="UTF-8"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="java.util.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="article_name" class="java.lang.String"/>
+	<queryString>
+		<![CDATA[SELECT id, algorithm_name From algorithm]]>
+	</queryString>
+	<field name="id" class="java.lang.String"/>
+	<field name="algorithm_name" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="16" splitType="Stretch">
+			<printWhenExpression><![CDATA[$F{algorithm_name}==null?true:false]]></printWhenExpression>
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="0" y="0" width="523" height="16" forecolor="#FF0000" />
+				<textElement>
+					<font fontName="Arial Unicode MS"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$R{NO_DATA_FOUND}]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="49" splitType="Stretch">
+			<textField pattern="HH:mm:ss" isBlankWhenNull="false">
+				<reportElement key="textField" isPrintRepeatedValues="false" x="479" y="35" width="44" height="10" isPrintInFirstWholeBand="true" />
+				<textElement>
+					<font fontName="Arial Unicode MS" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="20" splitType="Stretch">
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" mode="Opaque" x="240" y="0" width="57" height="20" backcolor="#CCCCCC" />
+				<textElement textAlignment="Center">
+					<font fontName="Arial Unicode MS" size="7" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$P{article_name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="41" splitType="Stretch">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement key="textField" x="297" y="0" width="35" height="40" />
+				<textElement>
+					<font fontName="Arial Unicode MS" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{algorithm_name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="32" splitType="Stretch">
+			<textField isBlankWhenNull="false">
+				<reportElement key="textField" x="0" y="4" width="63" height="10" />
+				<textElement>
+					<font fontName="Arial Unicode MS" size="7"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{algorithm_name}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>

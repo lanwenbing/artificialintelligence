@@ -24,6 +24,6 @@ public class BaseConstants {
 		
 	}
 	
-	public static final String AI_PROP_FILE_NOLANG = "resource.messages.ai";
+	public static final String AI_PROP_FILE_NOLANG = "resources.messages.ai";
 
 }

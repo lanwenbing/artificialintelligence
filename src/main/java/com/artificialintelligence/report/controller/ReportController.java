@@ -61,11 +61,22 @@ public class ReportController extends BaseReportController {
 		
 		String srcType = "";
 		srcType = pRequest.getParameter("srctype");
+		String mReportType = "";
+		mReportType = pRequest.getParameter("reporttype");
 		try {
 			if(srcType.equalsIgnoreCase(ReportConstants.BEAN)){
 				reportObj.setMInpSrc(ReportConstants.BEAN);
 			}else if(srcType.equalsIgnoreCase(ReportConstants.CSV)){
 				reportObj.setMInpSrc(ReportConstants.CSV);
+			}
+			if(mReportType.equalsIgnoreCase(ReportConstants.PDF_REFCD)){
+				reportObj.setMReportType(ReportConstants.PDF_REFCD);
+			}else if(mReportType.equalsIgnoreCase(ReportConstants.EXCEL_REFCD)){
+				reportObj.setMReportType(ReportConstants.EXCEL_REFCD);
+			} else if (reportObj.getMReportType().equalsIgnoreCase(ReportConstants.TXT_REFCD)) {
+				reportObj.setMReportType(ReportConstants.TXT_REFCD);
+			}else if (reportObj.getMReportType().equalsIgnoreCase(ReportConstants.CSV_REFCD)) {
+				reportObj.setMReportType(ReportConstants.CSV_REFCD);
 			}
 			getReportManager().process(reportObj);
 

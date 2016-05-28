@@ -41,11 +41,13 @@ import net.sf.jasperreports.engine.export.ooxml.JRXlsxExporter;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import com.artificialintelligence.report.manager.ReportManager;
 import com.artificialintelligence.report.manager.ReportObject;
 import com.artificialintelligence.report.util.ReportConstants;
-import com.artificialintelligence.report.util.ReportNodeNameContainer;
 import com.artificialintelligence.report.util.ThreadPoolExcecutorManager;
 
 /**
@@ -53,11 +55,13 @@ import com.artificialintelligence.report.util.ThreadPoolExcecutorManager;
  *
  * @author Uma.K
  */
+@Component
+@Scope("prototype") 
 public class BaseReportController {
 	private Log log = LogFactory.getLog(BaseReportController.class);
 
-
-	private ReportManager reportManager=null;
+	@Autowired
+	private ReportManager reportManager;
 
 	/**
 	 *
@@ -166,7 +170,6 @@ public class BaseReportController {
 		lServletOutputStream.close();
 		}
 		else{
-
 			pResponse.setContentType("text/html");
 		}
 		log.debug("REPORTS::::::Into viewPdfReport ...end...");
@@ -307,13 +310,7 @@ public class BaseReportController {
 		}
 
 		lReportObject.setMReportCriterias(lCriteriaMap);
-
-		if(pRequest.getParameter("reqname").endsWith("_web")){
-			lReportObject.setMReqName(pRequest.getParameter("reqname").replace("_web", ""));
-		}
-		else{
-			lReportObject.setMReqName(pRequest.getParameter("reqname"));
-		}
+		lReportObject.setMReqName(pRequest.getParameter("reqname"));
 		
 		return lReportObject;
 	}
