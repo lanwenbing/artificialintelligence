@@ -40,6 +40,21 @@ body {
 		line-height:150%;
 		font-size:5px;
 	}
+	.header .navis{
+		width:60%;
+		margin-left:auto;
+		margin-right:auto;
+		vertical-align:middle;
+		text-align: right;
+	}
+	.footer .navis{
+		width:60%;
+		text-align:center;
+		margin-left: auto;
+	    margin-right: auto;
+	    vertical-align:middle;
+	    margin-top:1%;
+	}
 }
 @media only screen and (max-width: 1500px) {
 	body .content{
@@ -76,6 +91,21 @@ body {
 		text-align:center;
 		line-height:150%;
 		font-size:5px;
+	}
+	.header .navis{
+		width:60%;
+		margin-left:auto;
+		margin-right:auto;
+		vertical-align:middle;
+		text-align: right;
+	}
+	.footer .navis{
+		width:60%;
+		text-align:center;
+		margin-left: auto;
+	    margin-right: auto;
+	    vertical-align:middle;
+	    margin-top:1%;
 	}
 }
 @media only screen and (max-width: 1000px) {
@@ -114,13 +144,28 @@ body {
 		line-height:150%;
 		font-size:2px;
 	}
+	.header .navis{
+		width:60%;
+		margin-left:auto;
+		margin-right:auto;
+		vertical-align:middle;
+		text-align: right;
+	}
+	.footer .navis{
+		width:60%;
+		text-align:center;
+		margin-left: auto;
+	    margin-right: auto;
+	    vertical-align:middle;
+	    margin-top:1%;
+	}
 }
 
 @media only screen and (max-width: 500px) {
 	body .content{
 		font-family: sans-serif;
-		margin-left:20%;
-		margin-right:20%;
+		margin-left:10%;
+		margin-right:10%;
 		line-height:28px;
 		font-size:10px;
 	}
@@ -152,16 +197,25 @@ body {
 		line-height:150%;
 		font-size:1px;
 	}
+	.header .navis{
+		width:80%;
+		margin-left:auto;
+		margin-right:auto;
+		vertical-align:middle;
+		text-align: right;
+	}
+	.footer .navis{
+		width:80%;
+		text-align:center;
+		margin-left: auto;
+	    margin-right: auto;
+	    vertical-align:middle;
+	    margin-top:1%;
+	}
 }
 
 
-.header .navis{
-	width:60%;
-	margin-left:auto;
-	margin-right:auto;
-	vertical-align:middle;
-	text-align: right;
-}
+
 .header .navis .register{
 }
 .header .navis .login{
@@ -169,11 +223,3 @@ body {
 }
 
 
-.footer .navis{
-	width:60%;
-	text-align:center;
-	margin-left: auto;
-    margin-right: auto;
-    vertical-align:middle;
-    margin-top:1%;
-}
