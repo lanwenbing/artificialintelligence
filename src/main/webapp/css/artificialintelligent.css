@@ -1,7 +1,7 @@
 @CHARSET "utf-8";
 
 .description{
-	
+	text-align:justify;
 }
 
 @media only screen and (max-width: 3000px) {

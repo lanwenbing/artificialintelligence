@@ -3,6 +3,7 @@
 	margin-left:auto !important;
 	margin-right:auto !important;
 	margin-top: 20px;
+	text-align:justify;
 }
 
 .col-left{
@@ -12,7 +13,7 @@
 
 .col-right{
 	width:80%;
-	text-align:center;
+	text-align:justify;
 }
 @media only screen and (max-width: 3000px) {
 	.subtitle{
