@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.artificialintelligence.dao.machinelearning.SystemDao;
-import com.artificialintelligence.machinelearning.model.SystemModel;
 import com.artificialintelligence.machinelearning.service.SystemService;
+import com.artificialintelligence.model.machinelearning.SystemModel;
 
 @Service
 public class SystemServiceImpl implements SystemService{

@@ -1,4 +1,4 @@
-package com.artificialintelligence.machinelearning.model;
+package com.artificialintelligence.model.machinelearning;
 
 import java.util.Date;
 

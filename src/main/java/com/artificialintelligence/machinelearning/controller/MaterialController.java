@@ -16,10 +16,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.artificialintelligence.dao.machinelearning.result.Result;
 import com.artificialintelligence.dao.machinelearning.util.BaseConstants;
-import com.artificialintelligence.machinelearning.model.CommentModel;
-import com.artificialintelligence.machinelearning.model.MaterialModel;
 import com.artificialintelligence.machinelearning.service.CommentService;
 import com.artificialintelligence.machinelearning.service.MaterialService;
+import com.artificialintelligence.model.machinelearning.CommentModel;
+import com.artificialintelligence.model.machinelearning.MaterialModel;
 
 @Controller  
 @RequestMapping("/material")

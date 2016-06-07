@@ -1,14 +1,14 @@
-package com.artificialintelligence.machinelearning.model;
+package com.artificialintelligence.model.machinelearning;
 
 import java.util.Date;
 
-public class SystemModel extends BaseModel {
+public class MaterialModel extends BaseModel {
 
 	private Integer id;
 	private String name;
 	private String description;
 	private String location;
-	private String algorithmId;
+	private Integer algorithmId;
 	private Date createTm;
 	private Date modifyTm;
 	
@@ -36,10 +36,10 @@ public class SystemModel extends BaseModel {
 	public void setLocation(String location) {
 		this.location = location;
 	}
-	public String getAlgorithmId() {
+	public Integer getAlgorithmId() {
 		return algorithmId;
 	}
-	public void setAlgorithmId(String algorithmId) {
+	public void setAlgorithmId(Integer algorithmId) {
 		this.algorithmId = algorithmId;
 	}
 	public Date getCreateTm() {
@@ -55,6 +55,6 @@ public class SystemModel extends BaseModel {
 		this.modifyTm = modifyTm;
 	}
 
-	
+
 
 }

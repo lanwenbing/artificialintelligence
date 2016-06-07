@@ -1,17 +1,19 @@
-package com.artificialintelligence.machinelearning.model;
+package com.artificialintelligence.model.machinelearning;
 
 import java.util.Date;
 
-public class MaterialModel extends BaseModel {
+public class ArticleModel extends BaseModel {
 
 	private Integer id;
 	private String name;
 	private String description;
+	private String content;
 	private String location;
 	private Integer algorithmId;
 	private Date createTm;
 	private Date modifyTm;
-	
+
+
 	public Integer getId() {
 		return id;
 	}
@@ -29,6 +31,12 @@ public class MaterialModel extends BaseModel {
 	}
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	public String getContent() {
+		return content;
+	}
+	public void setContent(String content) {
+		this.content = content;
 	}
 	public String getLocation() {
 		return location;
@@ -54,7 +62,6 @@ public class MaterialModel extends BaseModel {
 	public void setModifyTm(Date modifyTm) {
 		this.modifyTm = modifyTm;
 	}
-
-
+	
 
 }

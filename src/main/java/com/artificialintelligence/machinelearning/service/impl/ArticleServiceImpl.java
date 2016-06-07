@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.artificialintelligence.dao.machinelearning.ArticleDao;
-import com.artificialintelligence.machinelearning.model.ArticleModel;
 import com.artificialintelligence.machinelearning.service.ArticleService;
+import com.artificialintelligence.model.machinelearning.ArticleModel;
 
 @Service
 public class ArticleServiceImpl implements ArticleService{

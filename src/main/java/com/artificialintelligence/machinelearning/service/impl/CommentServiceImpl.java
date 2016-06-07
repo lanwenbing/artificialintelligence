@@ -7,8 +7,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.artificialintelligence.dao.machinelearning.CommentDao;
-import com.artificialintelligence.machinelearning.model.CommentModel;
 import com.artificialintelligence.machinelearning.service.CommentService;
+import com.artificialintelligence.model.machinelearning.CommentModel;
 
 @Service
 public class CommentServiceImpl implements CommentService{

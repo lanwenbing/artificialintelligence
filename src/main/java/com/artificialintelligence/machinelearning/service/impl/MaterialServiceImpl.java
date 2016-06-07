@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.artificialintelligence.dao.machinelearning.MaterialDao;
-import com.artificialintelligence.machinelearning.model.MaterialModel;
 import com.artificialintelligence.machinelearning.service.MaterialService;
+import com.artificialintelligence.model.machinelearning.MaterialModel;
 
 @Service
 public class MaterialServiceImpl implements MaterialService{

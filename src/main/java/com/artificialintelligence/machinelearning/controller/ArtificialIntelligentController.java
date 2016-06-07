@@ -13,10 +13,10 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.artificialintelligence.machinelearning.model.AlgorithmModel;
-import com.artificialintelligence.machinelearning.model.CategoryModel;
 import com.artificialintelligence.machinelearning.service.AlgorithmService;
 import com.artificialintelligence.machinelearning.service.CategoryService;
+import com.artificialintelligence.model.machinelearning.AlgorithmModel;
+import com.artificialintelligence.model.machinelearning.CategoryModel;
 
 @Controller  
 @RequestMapping("/artificialintelligent")

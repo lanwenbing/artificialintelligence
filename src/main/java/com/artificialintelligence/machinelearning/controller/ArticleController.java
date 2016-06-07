@@ -17,10 +17,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.artificialintelligence.dao.machinelearning.result.Result;
 import com.artificialintelligence.dao.machinelearning.util.BaseConstants;
-import com.artificialintelligence.machinelearning.model.ArticleModel;
-import com.artificialintelligence.machinelearning.model.CommentModel;
 import com.artificialintelligence.machinelearning.service.ArticleService;
 import com.artificialintelligence.machinelearning.service.CommentService;
+import com.artificialintelligence.model.machinelearning.ArticleModel;
+import com.artificialintelligence.model.machinelearning.CommentModel;
 
 @Controller  
 @RequestMapping("/article")

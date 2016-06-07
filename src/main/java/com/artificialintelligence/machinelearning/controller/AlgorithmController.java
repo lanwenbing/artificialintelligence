@@ -12,14 +12,14 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.artificialintelligence.machinelearning.model.AlgorithmModel;
-import com.artificialintelligence.machinelearning.model.ArticleModel;
-import com.artificialintelligence.machinelearning.model.MaterialModel;
-import com.artificialintelligence.machinelearning.model.SystemModel;
 import com.artificialintelligence.machinelearning.service.AlgorithmService;
 import com.artificialintelligence.machinelearning.service.ArticleService;
 import com.artificialintelligence.machinelearning.service.MaterialService;
 import com.artificialintelligence.machinelearning.service.SystemService;
+import com.artificialintelligence.model.machinelearning.AlgorithmModel;
+import com.artificialintelligence.model.machinelearning.ArticleModel;
+import com.artificialintelligence.model.machinelearning.MaterialModel;
+import com.artificialintelligence.model.machinelearning.SystemModel;
 
 @Controller  
 @RequestMapping("/algorithm")

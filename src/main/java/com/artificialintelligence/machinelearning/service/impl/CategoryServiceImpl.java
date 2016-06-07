@@ -6,8 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.artificialintelligence.dao.machinelearning.CategoryDao;
-import com.artificialintelligence.machinelearning.model.CategoryModel;
 import com.artificialintelligence.machinelearning.service.CategoryService;
+import com.artificialintelligence.model.machinelearning.CategoryModel;
 
 @Service
 public class CategoryServiceImpl implements CategoryService{

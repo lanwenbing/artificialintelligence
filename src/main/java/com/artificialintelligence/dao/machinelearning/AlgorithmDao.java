@@ -2,7 +2,7 @@ package com.artificialintelligence.dao.machinelearning;
 
 import java.util.List;
 
-import com.artificialintelligence.machinelearning.model.AlgorithmModel;
+import com.artificialintelligence.model.machinelearning.AlgorithmModel;
 
 public interface AlgorithmDao extends BaseDao{
 

@@ -2,7 +2,7 @@ package com.artificialintelligence.machinelearning.service;
 
 import java.util.List;
 
-import com.artificialintelligence.machinelearning.model.CategoryModel;
+import com.artificialintelligence.model.machinelearning.CategoryModel;
 
 public interface CategoryService {
 

@@ -2,7 +2,7 @@ package com.artificialintelligence.dao.machinelearning;
 
 import java.util.List;
 
-import com.artificialintelligence.machinelearning.model.CommentModel;
+import com.artificialintelligence.model.machinelearning.CommentModel;
 
 public interface CommentDao extends BaseDao{
 

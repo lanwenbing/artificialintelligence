@@ -2,7 +2,7 @@ package com.artificialintelligence.machinelearning.service;
 
 import java.util.List;
 
-import com.artificialintelligence.machinelearning.model.ArticleModel;
+import com.artificialintelligence.model.machinelearning.ArticleModel;
 
 public interface ArticleService {
 

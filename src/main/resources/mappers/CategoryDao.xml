@@ -6,10 +6,10 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.artificialintelligence.dao.machinelearning.CategoryDao">
 
     <!-- 查询一个系统 -->
-    <select id="getCategory" resultType="com.artificialintelligence.machinelearning.model.CategoryModel">
+    <select id="getCategory" resultType="com.artificialintelligence.model.machinelearning.CategoryModel">
         select id, name, description,content from category c
     </select> 
-    <select id="queryCategory" parameterType="int" resultType="com.artificialintelligence.machinelearning.model.CategoryModel">
+    <select id="queryCategory" parameterType="int" resultType="com.artificialintelligence.model.machinelearning.CategoryModel">
         select id, name, description,content from category c where id=#{id}
     </select>
 </mapper>

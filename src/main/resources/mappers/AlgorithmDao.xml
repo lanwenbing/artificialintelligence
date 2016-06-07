@@ -6,14 +6,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.artificialintelligence.dao.machinelearning.AlgorithmDao">
      
     <!-- 查询算法 -->
-    <select id="queryAlgorithmbyCategoryId" parameterType="int" resultType="com.artificialintelligence.machinelearning.model.AlgorithmModel">
+    <select id="queryAlgorithmbyCategoryId" parameterType="int" resultType="com.artificialintelligence.model.machinelearning.AlgorithmModel">
         select id, algorithm_name as algorithmName,  algorithm_description as algorithmDescription, algorithm_pro as algorithmPro, algorithm_con as algorithmCon,
         material_num as materialNum, article_num as articleNum, system_num as systemNum, category_id as categoryId, 
         create_tm as createTm, modify_tm as modifyTm from algorithm where category_id=#{id}
     </select> 
     
      <!-- 查询算法 -->
-    <select id="queryAlgorithmbyAlgorithmId" parameterType="int" resultType="com.artificialintelligence.machinelearning.model.AlgorithmModel">
+    <select id="queryAlgorithmbyAlgorithmId" parameterType="int" resultType="com.artificialintelligence.model.machinelearning.AlgorithmModel">
         select id, algorithm_name as algorithmName,  algorithm_description as algorithmDescription, algorithm_pro as algorithmPro, algorithm_con as algorithmCon,
         material_num as materialNum, article_num as articleNum, system_num as systemNum, category_id as categoryId, 
         create_tm as createTm, modify_tm as modifyTm from algorithm where id=#{id}

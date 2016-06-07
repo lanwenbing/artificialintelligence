@@ -2,7 +2,7 @@ package com.artificialintelligence.dao.machinelearning;
 
 import java.util.List;
 
-import com.artificialintelligence.machinelearning.model.MaterialModel;
+import com.artificialintelligence.model.machinelearning.MaterialModel;
 
 public interface MaterialDao extends BaseDao{
 

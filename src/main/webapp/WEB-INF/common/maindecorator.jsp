@@ -40,11 +40,29 @@ var dojoConfig = {
 </script>
 </head>
 <body  class="claro">
-	<div class="header">
-		<div class="navis">
-			<span class="register">登陆</span><span class="login">注册</span>
-		</div>
-	</div>
+		<div class="headbar">
+			<nav class="navbar navbar-default" role="navigation">
+			  <!-- Brand and toggle get grouped for better mobile display -->
+			  <div class="navbar-header">
+			    <a class="navbar-brand" href="#">AI</a>
+			  </div>
+			  <!-- Collect the nav links, forms, and other content for toggling -->
+			  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			    <ul class="nav navbar-nav navbar-right">
+			    	<li>
+			    		<form class="navbar-form navbar-left" role="search">
+			      			<div class="form-group">
+			        		<input type="text" class="form-control" placeholder="搜索">
+			      			</div>
+			      			<button type="submit" class="btn btn-default">提交</button>
+			    		</form>
+			    	</li>
+			      	<li><a href="../register/register.do">注册</a></li>
+			      	<li><a href="../login/userlogin.do">登陆</a></li>
+			    </ul>
+			  </div><!-- /.navbar-collapse -->
+			</nav>
+		</div>	
 	<div class="content">
 		 <sitemesh:write property='body' />
 	</div>
