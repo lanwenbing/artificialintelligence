@@ -8,7 +8,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><c:out value="${category.name}"/></title>
-<link rel="stylesheet" href="../../css/category.css" media="screen">
+<link rel="stylesheet" href="/ai/css/category.css" media="screen">
 </head>
 <body>
 <div class="title"><c:out value="${category.name}"/></div>

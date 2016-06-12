@@ -14,11 +14,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import com.artificialintelligence.core.service.CommentService;
 import com.artificialintelligence.dao.machinelearning.result.Result;
 import com.artificialintelligence.dao.machinelearning.util.BaseConstants;
-import com.artificialintelligence.machinelearning.service.CommentService;
 import com.artificialintelligence.machinelearning.service.MaterialService;
-import com.artificialintelligence.model.machinelearning.CommentModel;
+import com.artificialintelligence.model.core.CommentModel;
 import com.artificialintelligence.model.machinelearning.MaterialModel;
 
 @Controller  

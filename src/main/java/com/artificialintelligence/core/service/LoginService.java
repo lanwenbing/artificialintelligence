@@ -1,5 +1,7 @@
 package com.artificialintelligence.core.service;
 
-public interface LoginService {
+import com.artificialintelligence.model.core.UserModel;
 
+public interface LoginService {
+	public UserModel login(String username, String password);
 }

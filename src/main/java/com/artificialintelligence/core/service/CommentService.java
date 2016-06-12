@@ -1,8 +1,8 @@
-package com.artificialintelligence.machinelearning.service;
+package com.artificialintelligence.core.service;
 
 import java.util.List;
 
-import com.artificialintelligence.model.machinelearning.CommentModel;
+import com.artificialintelligence.model.core.CommentModel;
 
 public interface CommentService {
 

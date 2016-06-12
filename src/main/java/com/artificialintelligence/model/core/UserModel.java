@@ -6,6 +6,7 @@ public class UserModel {
 	private String password;
 	private String email;
 	private String mobilephone;
+	private String country;
 
 	public String getUsername() {
 		return username;
@@ -37,6 +38,14 @@ public class UserModel {
 
 	public void setMobilephone(String mobilephone) {
 		this.mobilephone = mobilephone;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
 	}
 
 }

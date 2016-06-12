@@ -1,6 +1,8 @@
-package com.artificialintelligence.model.machinelearning;
+package com.artificialintelligence.model.core;
 
 import java.util.Date;
+
+import com.artificialintelligence.model.machinelearning.BaseModel;
 
 public class CommentModel extends BaseModel {
 

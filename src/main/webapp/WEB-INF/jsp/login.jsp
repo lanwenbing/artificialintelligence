@@ -8,34 +8,36 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>登录</title>
-<link rel="stylesheet" href="../css/artificialintelligent.css" media="screen">
+<link rel="stylesheet" href="/ai/css/artificialintelligent.css" media="screen">
 </head>
 <body>
 	<div class="title">登录</div>
     <div class="category">
-	    <form>
-			<table class="table">
-				<tr>
-					<td class="col-left">用户名：</td>
-					<td class="col-right"><input type="text" value=""></td>
-					<td class="col-right"><label>请输入用户名</label></td>
-				</tr>
-				<tr>
-					<td class="col-left">密码：</td>
-					<td class="col-right"><input type="password"></td>
-					<td class="col-right"><label>请输入用户名</label></td>
-				</tr>
-				<tr>
-					<td class="col-left"><a>找回密码</a>&nbsp;&nbsp;<a>注册</a></td>
-					<td class="col-right"><input type="password"></td>
-					<td class="col-right"><label></label></td>
-				</tr>
-				<tr>
-					<td class="col-left"><a>qq登录</a>&nbsp;&nbsp;<a>微信登录</a></td>
-					<td class="col-right"><input type="password"></td>
-					<td class="col-right"><label></label></td>
-				</tr>
-			</table>
+		<form role="form" class="form-horizontal" action="../login/userlogin.do">
+		    <label class="notification"></label>
+			<div class="form-group">
+				<label class="col-sm-6 control-label">用户名：</label>
+				<div class="col-sm-6">
+					<input name="username" type="text" class="form-control" placeholder="6位以上的用户名" aria-describedby="basic-addon1">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-6 control-label">密码：</label>
+				<div class="col-sm-6">
+					<input name="password" type="password" class="form-control" placeholder="8位以上的密码，包括数字，字母" aria-describedby="basic-addon1">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-12">
+					<input type="submit" class="btn btn-primary" role="button" value="提交">
+				</div>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-12 control-label"><a>找回密码</a></label>
+			</div>
+			<div class="form-group">
+				<label class="col-sm-12 control-label"><a>qq登录</a>&nbsp;&nbsp;<a>微信登录</a></label>
+			</div>
 		</form>
     </div>
 </body>

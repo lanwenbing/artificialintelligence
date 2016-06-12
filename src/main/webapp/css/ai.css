@@ -1,9 +1,10 @@
 @CHARSET "utf-8";
+
 body {
 	font-family: sans-serif;
 }
 .headbar{
-	background-color: #7E3D76;
+	background-color: #6B286A;
 	text-align:center;
 }
 
@@ -27,15 +28,9 @@ body {
 		margin-bottom: 30px;
 		margin-top:4%;
 	}
-	
-	.header {
-		background-color:#7E3D76;
-		color:white;
-		line-height:300%;
-		font-size:15px;
-		margin-bottom:1%;
+	.claro{
+		
 	}
-	
 	.footer {
 		border-top:3px solid #7E3D76;
 		margin-top:10%;
@@ -44,13 +39,6 @@ body {
 		text-align:center;
 		line-height:150%;
 		font-size:5px;
-	}
-	.header .navis{
-		width:60%;
-		margin-left:auto;
-		margin-right:auto;
-		vertical-align:middle;
-		text-align: right;
 	}
 	.footer .navis{
 		width:60%;
@@ -62,10 +50,9 @@ body {
 	}
 	.navbar-default{
 		width:60%;
-	    background-color: #7E3D76;
-	    border-color: #7E3D76;
 	    margin-left: auto;
     	margin-right: auto;
+    	border-color: #6b286a !important;
 	}
 }
 @media only screen and (max-width: 1500px) {
@@ -87,14 +74,6 @@ body {
 		margin-bottom: 30px;
 	}
 	
-	.header {
-		background-color:#7E3D76;
-		margin-bottom:5%;
-		color:white;
-		line-height:300%;
-		font-size:10px;
-	}
-	
 	.footer {
 		border-top:3px solid #7E3D76;
 		margin-top:10%;
@@ -103,13 +82,6 @@ body {
 		text-align:center;
 		line-height:150%;
 		font-size:5px;
-	}
-	.header .navis{
-		width:60%;
-		margin-left:auto;
-		margin-right:auto;
-		vertical-align:middle;
-		text-align: right;
 	}
 	.footer .navis{
 		width:60%;
@@ -121,8 +93,7 @@ body {
 	}
 	.navbar-default{
 		width:60%;
-		background-color: #7E3D76;
-		border-color: #7E3D76;
+		border-color: #6b286a !important;
 	}
 }
 @media only screen and (max-width: 1000px) {
@@ -144,14 +115,6 @@ body {
 		margin-bottom: 30px;
 	}
 	
-	.header {
-		background-color:#7E3D76;
-		margin-bottom:5%;
-		color:white;
-		line-height:300%;
-		font-size:7px;
-	}
-	
 	.footer {
 		border-top:3px solid #7E3D76;
 		margin-top:10%;
@@ -160,13 +123,6 @@ body {
 		text-align:center;
 		line-height:150%;
 		font-size:2px;
-	}
-	.header .navis{
-		width:60%;
-		margin-left:auto;
-		margin-right:auto;
-		vertical-align:middle;
-		text-align: right;
 	}
 	.footer .navis{
 		width:60%;
@@ -178,8 +134,7 @@ body {
 	}
 	.navbar-default{
 		width:60%;
-		background-color: #7E3D76;
-		border-color: #7E3D76;
+		border-color: #6b286a !important;
 		margin-left: auto;
     	margin-right: auto;
 	}
@@ -204,14 +159,6 @@ body {
 		margin-bottom: 30px;
 	}
 	
-	.header {
-		background-color:#7E3D76;
-		margin-bottom:5%;
-		color:white;
-		line-height:300%;
-		font-size:3px;
-	}
-	
 	.footer {
 		border-top:3px solid #7E3D76;
 		margin-top:10%;
@@ -220,13 +167,6 @@ body {
 		text-align:center;
 		line-height:150%;
 		font-size:1px;
-	}
-	.header .navis{
-		width:80%;
-		margin-left:auto;
-		margin-right:auto;
-		vertical-align:middle;
-		text-align: right;
 	}
 	.footer .navis{
 		width:80%;
@@ -238,8 +178,7 @@ body {
 	}
 	.navbar-default{
 		width:80%;
-		background-color: #7E3D76;
-		border-color: #7E3D76;
+		border-color: #6b286a !important;
 		margin-left: auto;
     	margin-right: auto;
 	}	

@@ -1,4 +1,4 @@
-package com.artificialintelligence.machinelearning.service.impl;
+package com.artificialintelligence.core.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,9 +6,9 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.artificialintelligence.dao.machinelearning.CommentDao;
-import com.artificialintelligence.machinelearning.service.CommentService;
-import com.artificialintelligence.model.machinelearning.CommentModel;
+import com.artificialintelligence.core.service.CommentService;
+import com.artificialintelligence.dao.core.CommentDao;
+import com.artificialintelligence.model.core.CommentModel;
 
 @Service
 public class CommentServiceImpl implements CommentService{

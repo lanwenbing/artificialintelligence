@@ -46,6 +46,13 @@
         <property name="maxUploadSize" value="10485760000" />    
         <!-- 内存中的最大值 -->  
         <property name="maxInMemorySize" value="40960" />    
-    </bean>  
+    </bean> 
+    
+    <mvc:interceptors>
+        <mvc:interceptor>
+            <mvc:mapping path="/**"/>
+            <bean id="loginInterceptor" class="com.artificialintelligence.core.interceptor.LoginInterceptor"/>
+        </mvc:interceptor>
+    </mvc:interceptors> 
      
 </beans>  

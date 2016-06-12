@@ -8,12 +8,12 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>注册</title>
-<link rel="stylesheet" href="../css/register.css" media="screen">
+<link rel="stylesheet" href="/ai/css/register.css" media="screen">
 </head>
 <body>
 	<div class="title">注册</div>
     <div class="category">
-	    <form role="form" class="form-horizontal" id="submit_form" action="../register/adduser.do">
+	    <form role="form" class="form-horizontal" action="../register/adduser.do">
 				<div class="form-group">
 					<label class="col-sm-3 control-label">用户名：</label>
 					<div class="col-sm-4">
@@ -42,6 +42,15 @@
 					</div>					
 				</div>
 				<div class="form-group">
+					<label class="col-sm-3 control-label">电子邮件：</label>
+					<div class="col-sm-4">
+						<input type="text" name="country" class="form-control" placeholder="国家" aria-describedby="basic-addon1">
+					</div>
+					<div class="col-sm-5">
+						<label class="notification">请选择国家</label>
+					</div>					
+				</div>
+				<div class="form-group">
 					<label class="col-sm-3 control-label">密码：</label>
 					<div class="col-sm-4">
 						<input name="password" type="password" class="form-control" placeholder="8位以上的密码，包括数字，字母" aria-describedby="basic-addon1">
@@ -58,11 +67,10 @@
 					<div class="col-sm-5">
 						<label class="notification"></label>
 					</div>
-				</div><br/>
+				</div>
 				<div class="form-group">
-					<label class="col-sm-5 control-label"></label>
-					<input type="submit" class="btn btn-primary col-sm-2" role="button" value="提交">
-					<div class="col-sm-5">
+					<div class="col-sm-12">
+						<input type="submit" class="btn btn-primary" role="button" value="提交">
 					</div>
 				</div>
 		</form>

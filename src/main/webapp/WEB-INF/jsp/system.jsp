@@ -8,9 +8,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><c:out value="${system.name}"/></title>
-<link rel="stylesheet" href="../../css/system.css" media="screen">
-<script src="../../js/ckeditor/ckeditor.js"></script>
-<script src="../../js/util.js"></script>
+<link rel="stylesheet" href="/ai/css/system.css" media="screen">
+<script src="/ai/js/ckeditor/ckeditor.js"></script>
+<script src="/ai/js/util.js"></script>
 </head>
 <body>
 <div class="download"><a>下载</a></div>
@@ -57,7 +57,7 @@
     	            evt.preventDefault();
     	            var comment = CKEDITOR.instances.editor.getData();
     	            // Post the data to the server
-    	            request.post("../insertComment/${system.id}.do", {
+    	            request.post("/ai/insertComment/${system.id}.do", {
     	                // Send the username and password
     	                data: {
     	                	comment:comment,

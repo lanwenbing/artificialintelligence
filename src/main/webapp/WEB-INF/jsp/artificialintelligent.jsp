@@ -8,7 +8,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>人工智能之家</title>
-<link rel="stylesheet" href="../css/artificialintelligent.css" media="screen">
+<link rel="stylesheet" href="/ai/css/artificialintelligent.css" media="screen">
 </head>
 <body>
 	<div class="title">人工智能</div>
@@ -21,7 +21,7 @@
     <div class="category">
     	<c:forEach var="category" items="${categoryList}">
     		<div>
-	   			<a href="querycategory/${category.id}.do" class="subtitle"><c:out value="${category.id}"/>.<c:out value="${category.name}"/></a>
+	   			<a href="/ai/artificialintelligent/querycategory/${category.id}.do" class="subtitle"><c:out value="${category.id}"/>.<c:out value="${category.name}"/></a>
 	   			<div class="description"><c:out value="${category.description}" escapeXml="false"/></div>
 	   			<br/>
    			</div>

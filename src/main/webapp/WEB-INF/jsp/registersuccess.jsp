@@ -8,7 +8,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>注册</title>
-<link rel="stylesheet" href="../css/register.css" media="screen">
+<link rel="stylesheet" href="/ai/css/register.css" media="screen">
 </head>
 <body>
 	<div class="title">注册</div>

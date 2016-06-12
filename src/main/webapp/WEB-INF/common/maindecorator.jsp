@@ -11,20 +11,17 @@
 <sitemesh:write property='title' />
 </title>
 <sitemesh:write property='head' />
-<link rel="stylesheet" href="../js/dojo/dijit/themes/claro/claro.css" media="screen">
-<link href="../css/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet">
-<link rel="stylesheet" href="../css/ai.css" media="screen">
-<link rel="stylesheet" href="../../js/dojo/dijit/themes/claro/claro.css" media="screen">
-<link href="../../css/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet">
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-<script src="../../css/bootstrap-3.3.6/js/bootstrap.min.js"></script>
-<script src="../css/bootstrap-3.3.6/js/bootstrap.min.js"></script>
-<link rel="stylesheet" href="../../css/ai.css" media="screen">
+<link rel="stylesheet" href="/ai/css/ai.css" media="screen">
+<link rel="stylesheet" href="/ai/js/dojo/dijit/themes/claro/claro.css" media="screen">
+<link href="/ai/css/bootstrap-3.3.6/css/bootstrap.min.css" rel="stylesheet">
+<script src="/ai/js/jquery.min.js"></script>
+<script src="/ai/css/bootstrap-3.3.6/js/bootstrap.min.js"></script>
 <script type="text/javascript">
 var dojoConfig = {
 	    async: true,
 	    parseOnLoad:true,
 	    baseUrl: '/ai/js/dojo',
+	    locale:'${country}',
 	    packages: [
 	        'dojo',
 	        'dijit',
@@ -32,37 +29,73 @@ var dojoConfig = {
 	    ]
 	};
 </script>
-<script src="../js/dojo/dojo/dojo.js"></script>
-<script src="../../js/dojo/dojo/dojo.js"></script>
+<script src="/ai/js/dojo/dojo/dojo.js"></script>
+<script src="/ai/js/util.js"></script>
 <script type="text/javascript">
 	require(["dojo/parser", "dijit/layout/BorderContainer", "dijit/layout/TabContainer",
 	         "dijit/layout/ContentPane"]);
+	require(["dojo/i18n!locale/label/nls/maindecorator","dojo/dom-style", "dojo/dom"],  function(i18n,style,dom){
+		localization(i18n);
+		 var username="${username}"; 
+		 var islogin = "${islogin}";
+		 var usernameLabel=dom.byId("username");
+		 if(username!=undefined&&username!=null&&username!=""&&islogin!=undefined&&islogin!=null&&islogin!=""){
+			 var register=dom.byId("register");
+			 var login=dom.byId("login");
+			 usernameLabel.innerHTML=username;
+			 register.style.display = "none";
+			 login.style.display = "none";
+		 }else{
+			 var afterlogin=dom.byId("afterlogin");
+			 var logout=dom.byId("logout");
+			 afterlogin.style.display = "none";
+			 logout.style.display = "none";
+		 }
+	});
 </script>
 </head>
 <body  class="claro">
-		<div class="headbar">
-			<nav class="navbar navbar-default" role="navigation">
-			  <!-- Brand and toggle get grouped for better mobile display -->
-			  <div class="navbar-header">
-			    <a class="navbar-brand" href="#">AI</a>
-			  </div>
-			  <!-- Collect the nav links, forms, and other content for toggling -->
-			  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-			    <ul class="nav navbar-nav navbar-right">
-			    	<li>
-			    		<form class="navbar-form navbar-left" role="search">
-			      			<div class="form-group">
-			        		<input type="text" class="form-control" placeholder="搜索">
-			      			</div>
-			      			<button type="submit" class="btn btn-default">提交</button>
-			    		</form>
-			    	</li>
-			      	<li><a href="../register/register.do">注册</a></li>
-			      	<li><a href="../login/userlogin.do">登陆</a></li>
-			    </ul>
-			  </div><!-- /.navbar-collapse -->
-			</nav>
-		</div>	
+	<div class="headbar">
+		<nav class="navbar navbar-default">
+		  <div class="container-fluid">
+		    <!-- Brand and toggle get grouped for better mobile display -->
+		    <div class="navbar-header">
+		      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+		        <span class="sr-only"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="/ai/artificialintelligent/getcategory.do" >AI</a>
+		    </div>
+		    <!-- Collect the nav links, forms, and other content for toggling -->
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		      <ul class="nav navbar-nav">
+		      	<li><a href="/ai/artificialintelligent/getcategory.do" id="homepage">主页</a></li>
+		      </ul>
+		      <form class="navbar-form navbar-left" role="search">
+		 		<div class="form-group">
+		   			<input type="text" class="form-control"  id="search" value="搜索">
+		 		</div>
+		 		<button type="submit" class="btn btn-default" id="submit">提交</button>
+			  </form>
+		      <ul class="nav navbar-nav navbar-right">
+		        <li><a href="/ai/register/register.do" id="register">注册</a></li>
+				<li><a href="/ai/login/transfertologin.do" id="login">登陆</a></li>
+				<li id="afterlogin"><a><span id="greeting">您好, </span><span id="username"></span></a></li>
+				<li><a href="/ai/login/logout.do" id="logout">退出</a></li>
+		        <li class="dropdown">
+		          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false" ><span id="language_change">语言切换</span><span class="caret" ></span></a>
+		          <ul class="dropdown-menu">
+		            <li><a onclick="changeLanguage('zh-cn')" href=" javascript:void(0);" id="chinese">中文</a></li>
+		            <li><a onclick="changeLanguage('en')" href=" javascript:void(0);" id="english">英文</a></li>
+		          </ul>
+		        </li>
+		      </ul>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+	</div>	
 	<div class="content">
 		 <sitemesh:write property='body' />
 	</div>

@@ -8,9 +8,9 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><c:out value="${article.name}"/></title>
-<link rel="stylesheet" href="../../css/article.css" media="screen">
-<script src="../../js/ckeditor/ckeditor.js"></script>
-<script src="../../js/util.js"></script>
+<link rel="stylesheet" href="/ai/css/article.css" media="screen">
+<script src="/ai/js/ckeditor/ckeditor.js"></script>
+<script src="/ai/js/util.js"></script>
 </head>
 <body>
 <div class="download" id="download"><a>下载</a></div>
@@ -58,7 +58,7 @@
     	            evt.preventDefault();
     	            var comment = CKEDITOR.instances.editor.getData();
     	            // Post the data to the server
-    	            request.post("../insertComment/${article.id}.do", {
+    	            request.post("/ai/insertComment/${article.id}.do", {
     	                // Send the username and password
     	                data: {
     	                	comment:comment,
@@ -92,7 +92,7 @@
     				param += '&srctype=' + srctype.value;
     				param += '&reporttype=2';
     				param += '&article_name='+'${article.name}';
-    				var popupUrl = "../../report/displayreport.do?" + param;
+    				var popupUrl = "/ai/report/displayreport.do?" + param;
     	            window.open(popupUrl,"SpreadSheet",'toolbar=yes,location=yes,directories=yes,status=yes,menubar=yes,scrollbars=yes,copyhistory=yes,resizable=yes,height=750,width=1250');
     	        });
     	    }

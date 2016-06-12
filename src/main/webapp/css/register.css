@@ -6,15 +6,25 @@
 
 
 
+div.col-sm-12{
+	text-align:center;
+}
+
 @media only screen and (max-width: 3000px) {
 	.notification{
 		font-size:20px;
+	}
+	input.btn.btn-primary{
+		width:20%;
 	}
 }
 
 @media only screen and (max-width: 1500px) {
 	.notification{
 		font-size:17px;
+	}
+	input.btn.btn-primary{
+		width:20%;
 	}	
 }
 
@@ -22,10 +32,16 @@
 	.notification{
 		font-size:13px;
 	}	
+	input.btn.btn-primary{
+		width:20%;
+	}
 }
 
 @media only screen and (max-width: 500px) {
 	.notification{
 		font-size:10px;
 	}	
+	input.btn.btn-primary{
+		width:30%;
+	}
 }

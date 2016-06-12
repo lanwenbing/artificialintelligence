@@ -3,10 +3,10 @@
 PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
-<mapper namespace="com.artificialintelligence.dao.machinelearning.CommentDao">
+<mapper namespace="com.artificialintelligence.dao.core.CommentDao">
 
     <!-- 查询一个系统 -->
-    <select id="queryComments" resultType="com.artificialintelligence.model.machinelearning.CommentModel">
+    <select id="queryComments" resultType="com.artificialintelligence.model.core.CommentModel">
         select id, content,  type, type_id as typeId, time as tm from comment where type=#{0, jdbcType=SMALLINT} and type_id = #{1, jdbcType=SMALLINT} order by time desc
     </select> 
     <insert id="insertComment">
