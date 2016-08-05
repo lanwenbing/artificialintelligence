@@ -1,6 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
+<% 
+String path = request.getContextPath(); 
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+pageContext.setAttribute("basePath",basePath); 
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,16 +13,16 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><c:out value="${article.name}"/></title>
-<link rel="stylesheet" href="/ai/css/article.css" media="screen">
-<script src="/ai/js/ckeditor/ckeditor.js"></script>
-<script src="/ai/js/util.js"></script>
+<link rel="stylesheet" href="${basePath}css/article.css" media="screen">
+<script src="${basePath}js/ckeditor/ckeditor.js"></script>
+<script src="${basePath}js/util.js"></script>
 </head>
 <body>
 <div class="download" id="download"><a>下载</a></div>
 <input type="hidden" name="srctype" value="" id="srctype">
 <div class="title"><c:out value="${article.name}"/></div>
 <div class="introduction"><c:out value="${article.description}" escapeXml="false"/></div>
-<div>
+<div class="discuss">
 	<div class="subtitle">讨论区</div>
 	<div class="subcontent">
 		<div id="comments">
@@ -58,7 +63,7 @@
     	            evt.preventDefault();
     	            var comment = CKEDITOR.instances.editor.getData();
     	            // Post the data to the server
-    	            request.post("/ai/insertComment/${article.id}.do", {
+    	            request.post("${basePath}insertComment/${article.id}.do", {
     	                // Send the username and password
     	                data: {
     	                	comment:comment,
@@ -92,7 +97,7 @@
     				param += '&srctype=' + srctype.value;
     				param += '&reporttype=2';
     				param += '&article_name='+'${article.name}';
-    				var popupUrl = "/ai/report/displayreport.do?" + param;
+    				var popupUrl = "${basePath}report/displayreport.do?" + param;
     	            window.open(popupUrl,"SpreadSheet",'toolbar=yes,location=yes,directories=yes,status=yes,menubar=yes,scrollbars=yes,copyhistory=yes,resizable=yes,height=750,width=1250');
     	        });
     	    }

@@ -186,10 +186,6 @@ body {
 
 
 
-.header .navis .register{
+.center {
+	text-align:center !important;
 }
-.header .navis .login{
-	margin-left:2%;
-}
-
-

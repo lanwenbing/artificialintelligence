@@ -1,0 +1,27 @@
+@media only screen and (max-width: 3000px) {
+	.login_width{
+		width:50%;
+		margin:0 25% 0 25%;
+	}
+}
+
+@media only screen and (max-width: 1500px) {
+	.login_width{
+		width:60%;
+		margin:0 20% 0 20%;
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	.login_width{
+		width:80%;
+		margin:0 10% 0 10%;
+	}
+}
+
+@media only screen and (max-width: 500px) {
+	.login_width{
+		width:100%;
+		margin:0 0 0 0;
+	}
+}

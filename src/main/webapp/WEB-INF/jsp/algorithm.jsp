@@ -1,6 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
+<% 
+String path = request.getContextPath(); 
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+pageContext.setAttribute("basePath",basePath); 
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,7 +13,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title><c:out value="${algorithm.algorithmName}"/>分析和学习</title>
-<link rel="stylesheet" href="/ai//css/algorithm.css" media="screen">
+<link rel="stylesheet" href="${basePath}/css/algorithm.css" media="screen">
 </head>
 <body>
 <div class="title"><c:out value="${algorithm.algorithmName}"/>分析和学习</div>
@@ -23,7 +28,7 @@
 			</tr>
 			<c:forEach var="article" items="${articles}">
 			<tr>
-				<td class="col-left"><a href="/ai/article/queryarticle/${article.id}.do"><c:out value="${article.name}"/></a></td>
+				<td class="col-left"><a href="${basePath}article/queryarticle/${article.id}.do"><c:out value="${article.name}"/></a></td>
 				<td class="col-right"><c:out value="${article.description}" escapeXml="false"/></td>
 			</tr>
 			</c:forEach>
@@ -38,7 +43,7 @@
 			</tr>
 			<c:forEach var="material" items="${materials}">
 			<tr>
-				<td class="col-left"><a href="/ai/material/querymaterial/${material.id}.do"><c:out value="${material.name}"/></a></td>
+				<td class="col-left"><a href="${basePath}material/querymaterial/${material.id}.do"><c:out value="${material.name}"/></a></td>
 				<td class="col-right"><c:out value="${material.description}" escapeXml="false"/></td>
 			</tr>
 			</c:forEach>
@@ -53,7 +58,7 @@
 			</tr>
 			<c:forEach var="system" items="${systems}">
 			<tr>
-				<td class="col-left"><a href="/ai/system/querysystem/${system.id}.do"><c:out value="${system.name}"/></a></td>
+				<td class="col-left"><a href="${basePath}system/querysystem/${system.id}.do"><c:out value="${system.name}"/></a></td>
 				<td class="col-right"><c:out value="${system.description}" escapeXml="false"/></td>
 			</tr>
 			</c:forEach>

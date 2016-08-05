@@ -1,6 +1,11 @@
 <%@ page language="java" contentType="text/html; charset=utf-8" pageEncoding="utf-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jstl/fmt" %>
+<% 
+String path = request.getContextPath(); 
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/"; 
+pageContext.setAttribute("basePath",basePath); 
+%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <head>
@@ -8,7 +13,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>人工智能之家</title>
-<link rel="stylesheet" href="/ai/css/artificialintelligent.css" media="screen">
+<link rel="stylesheet" href="${basePath}css/artificialintelligent.css" media="screen">
 </head>
 <body>
 	<div class="title">人工智能</div>
@@ -21,7 +26,7 @@
     <div class="category">
     	<c:forEach var="category" items="${categoryList}">
     		<div>
-	   			<a href="/ai/artificialintelligent/querycategory/${category.id}.do" class="subtitle"><c:out value="${category.id}"/>.<c:out value="${category.name}"/></a>
+	   			<a href="${basePath}artificialintelligent/querycategory/${category.id}.do" class="subtitle"><c:out value="${category.id}"/>.<c:out value="${category.name}"/></a>
 	   			<div class="description"><c:out value="${category.description}" escapeXml="false"/></div>
 	   			<br/>
    			</div>
