@@ -18,7 +18,7 @@ pageContext.setAttribute("basePath",basePath);
 <body>
 	<div class="title" id="registersuccesstitle">注册</div>
     <div class="category" id="registersuccessnotification">
-	    注册成功！sss
+	    注册成功！
 	  <br/><br/><br/><br/><br/><br/>
     </div>
     <script>
