@@ -1,4 +1,4 @@
-define({ 
+define({root:({ 
 	"usernamereg":"Username：", 
 	"usernamereginput":"Please provide more than 6 digits",
 	"usernamenotification": "Please provide more than 6 digits", 
@@ -19,4 +19,7 @@ define({
 	"repasswordreginput":"Two password is different",
 	"passwordchecknotification":"Two password is different",
 	"submitreg":"Submit"
+ }),
+ 'zh-cn':true,
+ 'en':true
 })

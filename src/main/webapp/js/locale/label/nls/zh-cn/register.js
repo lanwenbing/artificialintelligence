@@ -1,0 +1,22 @@
+define({ 
+	"usernamereg":"用户名：", 
+	"usernamenotification": "请输入6位以上的用户名",
+	"usernamereginput":"请输入6位以上的用户名",
+	"mobilephonenumreg": "电话号码：",
+	"mobilephonenumreginput": "请输入正确的手机号码",
+	"mobilephonenumnotification": "请输入正确的手机号码",
+	"registerreg": "注册",
+	"emailreg": "电子邮件：",
+	"emailreginput": "请输入正确的电子邮件",
+	"emailnotification": "请输入正确的电子邮件",
+	"countryreg":"国家：",
+	"countryreginput":"请选择国家",
+	"countrynotification":"请选择国家",
+	"passwordreg":"密码：",
+	"passwordreginput":"请输入8位以上的密码，包括数字，字母",
+	"passwordnotification":"请输入8位以上的密码，包括数字，字母",
+	"repasswordreg":"再次确认密码：",
+	"repasswordreginput":"两次密码输入不一致",
+	"passwordchecknotification":"两次密码输入不一致",
+	"submitreg":"提交"
+ });
