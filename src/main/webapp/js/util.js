@@ -60,12 +60,14 @@ var localization = function(i18n) {
 		for ( var i in i18n) {
 			if (i != "$locale") {
 				var element = dom.byId(i);
-				if (element.tagName.toLocaleLowerCase() == 'input') {
-					element.value = "";
-					element.value = i18n[i];
-				} else {
-					domConst.empty(i);
-					domConst.place("<span>" + i18n[i] + "</span>", i);
+					if(element!=null){
+					if (element.tagName.toLocaleLowerCase() == 'input') {
+						element.value = "";
+						element.value = i18n[i];
+					} else {
+						domConst.empty(i);
+						domConst.place("<span>" + i18n[i] + "</span>", i);
+					}
 				}
 			}
 		}
