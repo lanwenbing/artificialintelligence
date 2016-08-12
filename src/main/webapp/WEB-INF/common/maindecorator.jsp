@@ -39,8 +39,30 @@ var dojoConfig = {
 <script type="text/javascript">
 	require(["dojo/parser", "dijit/layout/BorderContainer", "dijit/layout/TabContainer",
 	         "dijit/layout/ContentPane"]);
-	require(["dojo/i18n!locale/label/nls/maindecorator","dojo/dom-style", "dojo/dom"],  function(i18n,style,dom){
-		localization(i18n);
+	require(["dojo/i18n!locale/label/nls/maindecorator",
+	         "dojo/i18n!locale/label/nls/register",
+	         "dojo/i18n!locale/label/nls/login",
+	         "dojo/i18n!locale/label/nls/algorithm",
+	         "dojo/i18n!locale/label/nls/article",
+	         "dojo/i18n!locale/label/nls/artificialintelligent",
+	         "dojo/i18n!locale/label/nls/category",
+	         "dojo/i18n!locale/label/nls/material",
+	         "dojo/i18n!locale/label/nls/registersuccess",
+	         "dojo/i18n!locale/label/nls/system",
+	         "dojo/dom-style", "dojo/dom"],  
+	         function(i18nmaindecorator,i18nregister,i18nlogin,i18nalgorithm,i18narticle,
+	        		 i18nartificialintelligent,i18ncategory,i18nmaterial,i18nregistersuccess,i18nsystem,style,dom){
+		localization(i18nmaindecorator);
+		localization(i18nregister);
+		localization(i18nlogin);
+		localization(i18nalgorithm);
+		localization(i18narticle);
+		localization(i18nartificialintelligent);
+		localization(i18ncategory);
+		localization(i18nmaterial);
+		localization(i18nregistersuccess);
+		localization(i18nsystem);
+		
 		 var username="${username}"; 
 		 var islogin = "${islogin}";
 		 var usernameLabel=dom.byId("username");
@@ -105,7 +127,7 @@ var dojoConfig = {
 		 <sitemesh:write property='body' />
 	</div>
 	<div class="footer">
-		<div class="navis">
+		<div class="navis" id="footer">
 			该网站提供的内容仅用于培训。我们不保证内容的正确性。通过使用本站内容随之而来的风险与本站无关。该网站简体中文版的所有内容仅供测试，对任何法律问题及风险不承担任何责任。
 当使用本站时，代表您已接受了本站的使用条款和隐私条款。版权所有，保留一切权利。
 		</div>

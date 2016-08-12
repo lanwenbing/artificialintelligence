@@ -12,12 +12,12 @@ pageContext.setAttribute("basePath",basePath);
 <meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>注册</title>
+<title id="registertitle">注册</title>
 <link rel="stylesheet" href="${basePath}css/register.css" media="screen">
 </head>
 <body>
-	<div class="title">注册</div>
-    <div class="category">
+	<div class="title" id="registersuccesstitle">注册</div>
+    <div class="category" id="registersuccessnotification">
 	    注册成功！
 	  <br/><br/><br/><br/><br/><br/>
     </div>

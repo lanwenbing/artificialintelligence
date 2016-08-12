@@ -21,8 +21,8 @@ pageContext.setAttribute("basePath",basePath);
 <div class="subcontent">
 	<table class="table table-striped table-bordered">
 		<tr>
-			<th class="col-left">算法名称以及链接</th>
-			<th class="col-right">算法简介</th>
+			<th class="col-left" id="algorithmNameAndLink">算法名称以及链接</th>
+			<th class="col-right" id="algorithmDescription">算法简介</th>
 		</tr>
 		<c:forEach var="algorithm" items="${algorithmList}">
 		<tr>

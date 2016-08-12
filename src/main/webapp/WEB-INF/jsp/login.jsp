@@ -16,32 +16,32 @@ pageContext.setAttribute("basePath",basePath);
 <link rel="stylesheet" href="${basePath}css/login.css" media="screen">
 </head>
 <body>
-	<div class="title">登录</div>
+	<div class="title" id="loginlogin">登录</div>
     <div class="category login_width">
 		<form role="form" class="form-horizontal" action="../login/userlogin.do">
 		    <label class="notification"></label>
 			<div class="form-group">
-				<label class="col-sm-3 control-label">用户名：</label>
+				<label class="col-sm-3 control-label" id="usernamelogin">用户名：</label>
 				<div class="col-sm-9">
-					<input name="username" type="text" class="form-control" placeholder="6位以上的用户名" aria-describedby="basic-addon1">
+					<input name="username" type="text" class="form-control" placeholder="6位以上的用户名" aria-describedby="basic-addon1" id="usernamelogininput">
 				</div>
 			</div>
 			<div class="form-group">
-				<label class="col-sm-3 control-label">密码：</label>
+				<label class="col-sm-3 control-label" id="passwordlogin">密码：</label>
 				<div class="col-sm-9">
-					<input name="password" type="password" class="form-control" placeholder="8位以上的密码，包括数字，字母" aria-describedby="basic-addon1">
+					<input name="password" type="password" class="form-control" placeholder="8位以上的密码，包括数字，字母" aria-describedby="basic-addon1" id="passwordlogininput">
 				</div>
 			</div>
 			<div class="form-group">
 				<div class="col-sm-12 center">
-					<input type="submit" class="btn btn-primary" role="button" value="提交">
+					<input type="submit" class="btn btn-primary" role="button" value="提交" id="submitlogin">
 				</div>
 			</div>
 			<div class="form-group center">
-				<label class="col-sm-12 control-label center"><a>找回密码</a></label>
+				<label class="col-sm-12 control-label center"><a id="findpassword">找回密码</a></label>
 			</div>
 			<div class="form-group center">
-				<label class="col-sm-12 control-label center"><a>微信登录</a><a>qq登录</a></label>
+				<label class="col-sm-12 control-label center"><a id="weixinlogin">微信登录</a>&nbsp;&nbsp;<a id="qqlogin">QQ登录</a></label>
 			</div>
 		</form>
     </div>
