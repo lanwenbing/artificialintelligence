@@ -5,6 +5,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -35,8 +36,9 @@ public class MaterialController extends BaseController{
 	
 	@RequestMapping("/querymaterial/{id}")
 	public String getSystems(Map<String, Object> map, @PathVariable("id") Integer id, HttpServletRequest request,HttpServletResponse response) {
-		
-		MaterialModel material= materialService.queryMaterialbyMaterialId(id);
+		HttpSession session = request.getSession(); 
+		String lang = (String) session.getAttribute("lang");
+		MaterialModel material= materialService.queryMaterialbyMaterialId(id, lang);
 		request.setAttribute("material", material);
 		
 		List<CommentModel> comments= commentService.queryComments(BaseConstants.commentType.Material.getnCode(), id);

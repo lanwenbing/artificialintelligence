@@ -6,7 +6,7 @@ import com.artificialintelligence.model.machinelearning.CategoryModel;
 
 public interface CategoryDao extends BaseDao{
 
-	public List<CategoryModel> getCategory();
-	public CategoryModel queryCategory(int id);
+	public List<CategoryModel> getCategory(String lang);
+	public CategoryModel queryCategory(int id, String lang);
 	
 }

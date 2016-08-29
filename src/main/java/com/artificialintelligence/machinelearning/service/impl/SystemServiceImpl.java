@@ -15,14 +15,14 @@ public class SystemServiceImpl implements SystemService{
 	@Autowired
 	private SystemDao systemDao;
 	
-	public List<SystemModel> querySystemsByAlgorithmId(int id) {
+	public List<SystemModel> querySystemsByAlgorithmId(int id, String lang) {
 		
-		List<SystemModel> systemList = systemDao.querySystemsByAlgorithmId(id);
+		List<SystemModel> systemList = systemDao.querySystemsByAlgorithmId(id, lang);
 		return systemList;
 	}
 
-	public SystemModel querySystemBySystemId(int id) {
-		SystemModel system = systemDao.querySystemBySystemId(id);
+	public SystemModel querySystemBySystemId(int id, String lang) {
+		SystemModel system = systemDao.querySystemBySystemId(id, lang);
 		return system;
 	}
 

@@ -76,7 +76,8 @@ public class LoginController {
 		String language = (String) request.getParameter("language");
 		if(language!=null)
 			request.getSession().setAttribute("country", language);
-		 
+			HttpSession session = request.getSession(); 
+			session.setAttribute("lang", language); 
 		
 	}
 }

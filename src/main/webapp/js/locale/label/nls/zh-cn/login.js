@@ -1,4 +1,4 @@
-define(({ 
+define({ 
 	"loginlogin": "登录", 
 	"usernamelogin": "用户名：", 
 	"usernamelogininput": "6位以上的用户名",
@@ -8,5 +8,5 @@ define(({
 	"findpassword":"找回密码",
 	"weixinlogin":"微信登录",
 	"qqlogin":"QQ登录"
- })
+ }
 );

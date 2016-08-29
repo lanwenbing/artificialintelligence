@@ -16,17 +16,17 @@ public class ArticleServiceImpl implements ArticleService{
 	private ArticleDao articleDao;
 
 
-	public List<ArticleModel> queryArticlebyAlgorithmId(int id) {
+	public List<ArticleModel> queryArticlebyAlgorithmId(int id, String lang) {
 		
-		List<ArticleModel> articleList = articleDao.queryArticlebyAlgorithmId(id);
+		List<ArticleModel> articleList = articleDao.queryArticlebyAlgorithmId(id, lang);
 		
 		return articleList;
 	}
 
 
-	public ArticleModel queryArticlebyArticleId(int id) {
+	public ArticleModel queryArticlebyArticleId(int id, String lang) {
 		
-		ArticleModel article = articleDao.queryArticlebyArticleId(id);
+		ArticleModel article = articleDao.queryArticlebyArticleId(id, lang);
 		
 		return article;
 	}

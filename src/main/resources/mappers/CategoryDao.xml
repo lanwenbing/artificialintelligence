@@ -7,9 +7,9 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 
     <!-- 查询一个系统 -->
     <select id="getCategory" resultType="com.artificialintelligence.model.machinelearning.CategoryModel">
-        select id, name, description,content from category c
+        select id, case #{0} when 'en' then name_en  else name end as name,  case #{0} when 'en' then description_en  else description end as description,  case #{0} when 'en' then content_en  else content end as content from category c
     </select> 
-    <select id="queryCategory" parameterType="int" resultType="com.artificialintelligence.model.machinelearning.CategoryModel">
-        select id, name, description,content from category c where id=#{id}
+    <select id="queryCategory" resultType="com.artificialintelligence.model.machinelearning.CategoryModel">
+        select id, case #{1} when 'en' then name_en else name end as name,  case #{1} when 'en' then description_en  else description end as description,  case #{1} when 'en' then content_en else content end as content from category c where id=#{0}
     </select>
 </mapper>

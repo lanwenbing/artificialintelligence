@@ -6,14 +6,14 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.artificialintelligence.dao.machinelearning.MaterialDao">
      
      <!-- 查询算法 -->
-    <select id="queryMaterialsbyAlgorithmId" parameterType="int" resultType="com.artificialintelligence.model.machinelearning.MaterialModel">
-        select id, name,  description, location, algorithm_id as algorithmId,
-        create_tm as createTm, modify_tm as modifyTm from material where algorithm_id=#{id}
+    <select id="queryMaterialsbyAlgorithmId" resultType="com.artificialintelligence.model.machinelearning.MaterialModel">
+        select id, case #{1} when 'en' then name_en else name end as name,  case #{1} when 'en' then description_en else description end as description, location, algorithm_id as algorithmId,
+        create_tm as createTm, modify_tm as modifyTm from material where algorithm_id=#{0}
     </select>
     
      <!-- 查询算法 -->
-    <select id="queryMaterialbyMaterialId" parameterType="int" resultType="com.artificialintelligence.model.machinelearning.MaterialModel">
-        select id, name,  description, location, algorithm_id as algorithmId,
-        create_tm as createTm, modify_tm as modifyTm from material where id=#{id}
+    <select id="queryMaterialbyMaterialId" resultType="com.artificialintelligence.model.machinelearning.MaterialModel">
+        select id, case #{1} when 'en' then name_en else name end as name,  case #{1} when 'en' then description_en else description end as description, location, algorithm_id as algorithmId,
+        create_tm as createTm, modify_tm as modifyTm from material where id=#{0}
     </select>
 </mapper>

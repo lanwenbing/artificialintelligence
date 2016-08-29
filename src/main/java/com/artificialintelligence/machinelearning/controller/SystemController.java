@@ -5,6 +5,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,8 +37,9 @@ public class SystemController extends BaseController{
 	
 	@RequestMapping("/querysystem/{id}")
 	public String getSystem(Map<String, Object> map, @PathVariable("id") Integer id, HttpServletRequest request,HttpServletResponse response) {
-		
-		SystemModel system= systemService.querySystemBySystemId(id);
+		HttpSession session = request.getSession(); 
+		String lang = (String) session.getAttribute("lang");
+		SystemModel system= systemService.querySystemBySystemId(id, lang);
 		request.setAttribute("system", system);
 		
 		List<CommentModel> comments= commentService.queryComments(BaseConstants.commentType.System.getnCode(), id);

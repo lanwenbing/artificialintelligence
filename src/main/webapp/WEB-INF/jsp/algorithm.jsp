@@ -20,11 +20,11 @@ pageContext.setAttribute("basePath",basePath);
 <div class="introduction"><c:out value="${category.algorithmDescription}" escapeXml="false"/></div>
 <div class="subcontent">
 	<div>
-		<div class="subtitle">1. 文章</div>
+		<div class="subtitle" id="article">1. 文章</div>
 		<table class="table table-striped table-bordered">
 			<tr>
-				<th class="col-left">文章名称以及链接</th>
-				<th class="col-right">文章简介</th>
+				<th class="col-left" id="articlenameandlink">文章名称以及链接</th>
+				<th class="col-right" id="articledescription">文章简介</th>
 			</tr>
 			<c:forEach var="article" items="${articles}">
 			<tr>
@@ -35,11 +35,11 @@ pageContext.setAttribute("basePath",basePath);
 		</table>
 	</div>
 	<div>
-		<div class="subtitle">2. 材料</div>
+		<div class="subtitle" id="material">2. 材料</div>
 		<table class="table table-striped table-bordered">
 			<tr>
-				<th class="col-left">材料名称以及链接</th>
-				<th class="col-right">材料简介</th>
+				<th class="col-left" id="materialnameandlink">材料名称以及链接</th>
+				<th class="col-right" id="materialdescription">材料简介</th>
 			</tr>
 			<c:forEach var="material" items="${materials}">
 			<tr>
@@ -50,11 +50,11 @@ pageContext.setAttribute("basePath",basePath);
 		</table>
 	</div>
 	<div>
-		<div class="subtitle">3. 系统</div>
+		<div class="subtitle" id="system">3. 系统</div>
 		<table class="table table-striped table-bordered">
 			<tr>
-				<th class="col-left">系统名称以及链接</th>
-				<th class="col-right">系统简介</th>
+				<th class="col-left" id="systemnameandlink">系统名称以及链接</th>
+				<th class="col-right" id="systemdescription">系统简介</th>
 			</tr>
 			<c:forEach var="system" items="${systems}">
 			<tr>

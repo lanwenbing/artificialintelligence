@@ -5,6 +5,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,16 +40,19 @@ public class AlgorithmController extends BaseController{
 	@RequestMapping("/queryalgorithm/{id}")
 	public String getSystems(Map<String, Object> map, @PathVariable("id") Integer id, HttpServletRequest request,HttpServletResponse response) {
 		
-		AlgorithmModel algorithm= algorithmService.queryAlgorithmbyAlgorithmId(id);
+		HttpSession session = request.getSession(); 
+		String lang = (String) session.getAttribute("lang"); 
+		
+		AlgorithmModel algorithm= algorithmService.queryAlgorithmbyAlgorithmId(id, lang);
 		request.setAttribute("algorithm", algorithm);
 		
-		List<ArticleModel> articles= articleService.queryArticlebyAlgorithmId(id);
+		List<ArticleModel> articles= articleService.queryArticlebyAlgorithmId(id, lang);
 		request.setAttribute("articles", articles);
 		
-		List<MaterialModel> materials= materialService.queryMaterialsbyAlgorithmId(id);
+		List<MaterialModel> materials= materialService.queryMaterialsbyAlgorithmId(id, lang);
 		request.setAttribute("materials", materials);
 		
-		List<SystemModel> systems= systemService.querySystemsByAlgorithmId(id);
+		List<SystemModel> systems= systemService.querySystemsByAlgorithmId(id, lang);
 		request.setAttribute("systems", systems);
 		
 		return "algorithm";

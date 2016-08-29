@@ -5,6 +5,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,8 +37,9 @@ public class ArticleController extends BaseController{
 	
 	@RequestMapping("/queryarticle/{id}")
 	public String queryArticle(Map<String, Object> map, @PathVariable("id") Integer id, HttpServletRequest request,HttpServletResponse response) {
-		
-		ArticleModel article= articleService.queryArticlebyArticleId(id);
+		HttpSession session = request.getSession(); 
+		String lang = (String) session.getAttribute("lang"); 
+		ArticleModel article= articleService.queryArticlebyArticleId(id, lang);
 		request.setAttribute("article", article);
 
 		List<CommentModel> comments= commentService.queryComments(BaseConstants.commentType.Article.getnCode(), id);

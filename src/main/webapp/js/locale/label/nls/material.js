@@ -1,14 +1,8 @@
 define({root:({ 
-	"homepage": "homepage", 
-	"search": "Search", 
-	"submit": "Submit",
-	"register": "Register",
-	"login": "Login",
-	"language_change": "Change Language",
-	"chinese":"Chinese",
-	"english":"English",
-	"greeting":"Hello, ",
-	"logout":"Log Out"
+	"download": "Download", 
+	"discussarea":"Discuss Area",
+	"view": "Comment Your View: ",
+	"materialsubmit":"Submit"
  }),
  'zh-cn':true,
  'en':true

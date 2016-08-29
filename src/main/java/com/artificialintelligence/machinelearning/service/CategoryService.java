@@ -6,6 +6,6 @@ import com.artificialintelligence.model.machinelearning.CategoryModel;
 
 public interface CategoryService {
 
-	public List<CategoryModel> getCategory();
-	public CategoryModel queryCategory(Integer id);
+	public List<CategoryModel> getCategory(String lang);
+	public CategoryModel queryCategory(Integer id, String lang);
 }

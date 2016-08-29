@@ -1,13 +1,12 @@
-define(({ 
-	"usernamereg": "用户名", 
-	"search": "搜索", 
-	"submit": "提交",
-	"register": "注册",
-	"login": "登陆",
-	"language_change": "语言切换",
-	"chinese":"中文",
-	"english":"英文",
-	"greeting":"您好, ",
-	"logout":"退出"
- })
+define({ 
+	"article": "1. 文章", 
+	"articlenameandlink": "文章名称以及链接", 
+	"articledescription": "文章简介",
+	"material": "2. 材料",
+	"materialnameandlink": "材料名称以及链接",
+	"materialdescription": "材料简介",
+	"system":"3. 系统",
+	"systemnameandlink":"系统名称以及链接",
+	"systemdescription":"系统简介 "
+ }
 );

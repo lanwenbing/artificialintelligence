@@ -6,6 +6,7 @@ import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,8 +35,9 @@ public class ArtificialIntelligentController extends BaseController{
 	public String getCategory(Map<String, Object> map, HttpServletRequest request, HttpServletResponse response) {
 		
 		List<CategoryModel>  categoryList =  new ArrayList<CategoryModel>();
-		
-		categoryList = categoryService.getCategory();
+		HttpSession session = request.getSession(); 
+		String lang = (String) session.getAttribute("lang"); 
+		categoryList = categoryService.getCategory(lang);
 		request.setAttribute("categoryList", categoryList);
 		return "artificialintelligent";
 		
@@ -44,11 +46,13 @@ public class ArtificialIntelligentController extends BaseController{
 	@RequestMapping("/querycategory/{id}")
 	public String artificialIntelligent(@PathVariable("id") Integer id, Map<String, Object> map, HttpServletRequest request,HttpServletResponse response) {
 		CategoryModel  category =  new CategoryModel();
-		category = categoryService.queryCategory(id);
+		HttpSession session = request.getSession(); 
+		String lang = (String) session.getAttribute("lang");
+		category = categoryService.queryCategory(id,lang);
 		request.setAttribute("category", category);
 		
 		List<AlgorithmModel> algorithmList = new ArrayList<AlgorithmModel>();
-		algorithmList = algorithmService.queryAlgorithmbyCategoryId(id);
+		algorithmList = algorithmService.queryAlgorithmbyCategoryId(id, lang);
 		logger.info(algorithmList.size());
 		request.setAttribute("algorithmList", algorithmList);
 		

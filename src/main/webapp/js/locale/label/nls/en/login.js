@@ -1,4 +1,4 @@
-define({root:({ 
+define({
 	"loginlogin": "Login", 
 	"usernamelogin": "Username:", 
 	"usernamelogininput": "Please provide more than 6 digits",
@@ -8,7 +8,4 @@ define({root:({
 	"findpassword":"Find Password",
 	"weixinlogin":"WeChat Login",
 	"qqlogin":"QQ Login"
- }),
- 'zh-cn':true,
- 'en':true
-})
+ })

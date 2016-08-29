@@ -18,12 +18,12 @@ pageContext.setAttribute("basePath",basePath);
 <script src="${basePath}js/util.js"></script>
 </head>
 <body>
-<div class="download" id="download"><a>下载</a></div>
+<div class="download" id="download"><a id="download">下载</a></div>
 <input type="hidden" name="srctype" value="" id="srctype">
 <div class="title"><c:out value="${article.name}"/></div>
 <div class="introduction"><c:out value="${article.description}" escapeXml="false"/></div>
 <div class="discuss">
-	<div class="subtitle">讨论区</div>
+	<div class="subtitle" id="discussarea">讨论区</div>
 	<div class="subcontent">
 		<div id="comments">
 			<c:forEach var="comment" items="${comments}">
@@ -35,12 +35,12 @@ pageContext.setAttribute("basePath",basePath);
 		</div>
 		<br/>
 		<div>
-			<div>评论你的观点：</div>
+			<div id="view">评论你的观点：</div>
 			<form id="submit_form">
 	            <textarea name="editor" id="editor" rows="10" cols="80">
 	                This is my textarea to be replaced with CKEditor.
 	            </textarea> 
-	            <input type="submit" value="提交" class="submit_btn"/>
+	            <input type="submit" value="提交" class="submit_btn" id="articlesubmit"/>
 	        </form>
 	   	</div>
 	</div>

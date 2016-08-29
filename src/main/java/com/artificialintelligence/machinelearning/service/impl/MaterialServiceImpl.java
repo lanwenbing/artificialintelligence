@@ -16,17 +16,17 @@ public class MaterialServiceImpl implements MaterialService{
 	private MaterialDao materialDao;
 
 
-	public List<MaterialModel> queryMaterialsbyAlgorithmId(int id) {
+	public List<MaterialModel> queryMaterialsbyAlgorithmId(int id, String lang) {
 		
-		List<MaterialModel> materialList = materialDao.queryMaterialsbyAlgorithmId(id);
+		List<MaterialModel> materialList = materialDao.queryMaterialsbyAlgorithmId(id, lang);
 		
 		return materialList;
 	}
 
 
-	public MaterialModel queryMaterialbyMaterialId(int id) {
+	public MaterialModel queryMaterialbyMaterialId(int id, String lang) {
 		
-		MaterialModel material = materialDao.queryMaterialbyMaterialId(id);
+		MaterialModel material = materialDao.queryMaterialbyMaterialId(id, lang);
 		return material;
 	}
 	

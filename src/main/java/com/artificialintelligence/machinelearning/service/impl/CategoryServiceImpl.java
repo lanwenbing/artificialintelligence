@@ -15,15 +15,15 @@ public class CategoryServiceImpl implements CategoryService{
 	@Autowired
 	private CategoryDao categoryDao;
 	
-	public List<CategoryModel> getCategory() {
+	public List<CategoryModel> getCategory(String lang) {
 		
-		List<CategoryModel> categoryList = categoryDao.getCategory();
+		List<CategoryModel> categoryList = categoryDao.getCategory(lang);
 		return categoryList;
 	}
 	
-	public CategoryModel queryCategory(Integer id) {
+	public CategoryModel queryCategory(Integer id, String lang) {
 		
-		CategoryModel category = categoryDao.queryCategory(id);
+		CategoryModel category = categoryDao.queryCategory(id, lang);
 		return category;
 	}
 

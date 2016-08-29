@@ -6,17 +6,19 @@ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
 <mapper namespace="com.artificialintelligence.dao.machinelearning.AlgorithmDao">
      
     <!-- 查询算法 -->
-    <select id="queryAlgorithmbyCategoryId" parameterType="int" resultType="com.artificialintelligence.model.machinelearning.AlgorithmModel">
-        select id, algorithm_name as algorithmName,  algorithm_description as algorithmDescription, algorithm_pro as algorithmPro, algorithm_con as algorithmCon,
+    <select id="queryAlgorithmbyCategoryId" resultType="com.artificialintelligence.model.machinelearning.AlgorithmModel">
+        select id, case #{1} when 'en' then algorithm_name_en else algorithm_name end as algorithmName,  case #{1} when 'en' then 
+        algorithm_description_en else algorithm_description end as algorithmDescription, algorithm_pro as algorithmPro, algorithm_con as algorithmCon,
         material_num as materialNum, article_num as articleNum, system_num as systemNum, category_id as categoryId, 
-        create_tm as createTm, modify_tm as modifyTm from algorithm where category_id=#{id}
+        create_tm as createTm, modify_tm as modifyTm from algorithm where category_id=#{0}
     </select> 
     
      <!-- 查询算法 -->
-    <select id="queryAlgorithmbyAlgorithmId" parameterType="int" resultType="com.artificialintelligence.model.machinelearning.AlgorithmModel">
-        select id, algorithm_name as algorithmName,  algorithm_description as algorithmDescription, algorithm_pro as algorithmPro, algorithm_con as algorithmCon,
-        material_num as materialNum, article_num as articleNum, system_num as systemNum, category_id as categoryId, 
-        create_tm as createTm, modify_tm as modifyTm from algorithm where id=#{id}
+    <select id="queryAlgorithmbyAlgorithmId" resultType="com.artificialintelligence.model.machinelearning.AlgorithmModel">
+        select id, case #{1} when 'en' then algorithm_name_en else algorithm_name end as algorithmName, case #{1} when 'en' then 
+        algorithm_description_en else algorithm_description end as algorithmDescription, algorithm_pro as algorithmPro, algorithm_con as algorithmCon,
+        material_num as materialNum, article_num as articleNum, system_num as systemNum, category_id as categoryId,
+        create_tm as createTm, modify_tm as modifyTm from algorithm where id=#{0}
     </select>
     
 </mapper>
