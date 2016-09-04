@@ -49,7 +49,7 @@ public class SystemController extends BaseController{
 		
 	}
 	
-	@RequestMapping(value="/insertComment/{id}", method=RequestMethod.POST)
+	@RequestMapping(value="/insertcomment/{id}", method=RequestMethod.POST)
 	@ResponseBody
 	public Result<List<CommentModel>> insertComment(Map<String, Object> map, @PathVariable("id") Integer id, HttpServletRequest request,HttpServletResponse response) {
 		

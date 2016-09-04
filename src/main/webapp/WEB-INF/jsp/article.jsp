@@ -18,7 +18,7 @@ pageContext.setAttribute("basePath",basePath);
 <script src="${basePath}js/util.js"></script>
 </head>
 <body>
-<div class="download" id="download"><a id="download">下载</a></div>
+<div class="download"><a id="download" href="javascript:void(0);">下载</a></div>
 <input type="hidden" name="srctype" value="" id="srctype">
 <div class="title"><c:out value="${article.name}"/></div>
 <div class="introduction"><c:out value="${article.description}" escapeXml="false"/></div>
@@ -37,9 +37,7 @@ pageContext.setAttribute("basePath",basePath);
 		<div>
 			<div id="view">评论你的观点：</div>
 			<form id="submit_form">
-	            <textarea name="editor" id="editor" rows="10" cols="80">
-	                This is my textarea to be replaced with CKEditor.
-	            </textarea> 
+	            <textarea name="editor" id="editor" rows="10" cols="80"></textarea> 
 	            <input type="submit" value="提交" class="submit_btn" id="articlesubmit"/>
 	        </form>
 	   	</div>
@@ -55,6 +53,7 @@ pageContext.setAttribute("basePath",basePath);
 
     	        var form = dom.byId('submit_form');
     	        var commentsDiv = dom.byId('comments');
+    	        
     	        // Attach the onsubmit event handler of the form
     	        on(form, "submit", function(evt){
 
@@ -62,11 +61,12 @@ pageContext.setAttribute("basePath",basePath);
     	            evt.stopPropagation();
     	            evt.preventDefault();
     	            var comment = CKEDITOR.instances.editor.getData();
+    	            console.log(comment);
     	            // Post the data to the server
-    	            request.post("${basePath}insertComment/${article.id}.do", {
+    	            request.post("${basePath}article/insertcomment/${article.id}.do", {
     	                // Send the username and password
     	                data: {
-    	                	comment:comment,
+    	                	comment:comment
     	                },
     	                handleAs: "json"
     	            }).then(function(response){

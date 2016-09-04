@@ -189,28 +189,28 @@
       <artifactId>jasperreports</artifactId>  
       <version>6.2.1</version>  
       <scope>system</scope>  
-      <systemPath>D:\ArtificialIntelligence\ai\src\main\webapp\WEB-INF\lib\jasperreports-6.2.1.jar</systemPath>  
+      <systemPath>C:\D\ArtificialIntelligence\ai\src\main\webapp\WEB-INF\lib\jasperreports-6.2.1.jar</systemPath>  
     </dependency>
     <dependency>  
       <groupId>org.jaspersoft</groupId>  
       <artifactId>jasperreports-fonts</artifactId>  
       <version>6.2.1</version>  
       <scope>system</scope>  
-      <systemPath>D:\ArtificialIntelligence\ai\src\main\webapp\WEB-INF\lib\jasperreports-fonts-6.2.1.jar</systemPath>  
+      <systemPath>C:\D\ArtificialIntelligence\ai\src\main\webapp\WEB-INF\lib\jasperreports-fonts-6.2.1.jar</systemPath>  
     </dependency>
     <dependency>  
       <groupId>org.jaspersoft</groupId>  
       <artifactId>jasperreports-javaflow</artifactId>  
       <version>6.2.1</version>  
       <scope>system</scope>  
-      <systemPath>D:\ArtificialIntelligence\ai\src\main\webapp\WEB-INF\lib\jasperreports-javaflow-6.2.1.jar</systemPath>  
+      <systemPath>C:\D\ArtificialIntelligence\ai\src\main\webapp\WEB-INF\lib\jasperreports-javaflow-6.2.1.jar</systemPath>  
     </dependency>
     <dependency>  
       <groupId>org.jaspersoft</groupId>  
       <artifactId>jasperreports-functions</artifactId>  
       <version>6.2.1</version>  
       <scope>system</scope>  
-      <systemPath>D:\ArtificialIntelligence\ai\src\main\webapp\WEB-INF\lib\jasperreports-functions-6.2.1.jar</systemPath>  
+      <systemPath>C:\D\ArtificialIntelligence\ai\src\main\webapp\WEB-INF\lib\jasperreports-functions-6.2.1.jar</systemPath>  
     </dependency>
     <dependency>
 	   <groupId>groovy</groupId>

@@ -1,0 +1,9 @@
+define({root:({ 
+	"searchresult":"搜索结果", 
+	"searchNum":"序号",
+	"searchName":"算法名称",
+	"searchDescription":"算法简介"
+}),
+'zh-cn':true,
+'en':true
+});

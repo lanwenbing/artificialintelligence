@@ -88,3 +88,10 @@ var changeLanguage = function(language) {
 	});
 	return false;
 }
+var searchtype = function(type) {
+	
+	var value = $("#search").val();
+	window.location.href="/ai/search/searchtype.do?value="+value+"&type="+type;
+	
+	return false;
+};

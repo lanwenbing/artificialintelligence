@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.artificialintelligence.dao.core.SearchDao">
+    <select id="searchArticle" resultType="com.artificialintelligence.model.core.SearchContentModel">
+        select id, case #{1} when 'en' then name_en else name end as name,
+        case #{1} when 'en' then description_en else description end as description
+        from article 
+        where case #{1} when 'en' then description_en like CONCAT('%',#{0},'%') else  description like CONCAT('%',#{0},'%') end
+    </select>
+    <select id="searchMaterial" resultType="com.artificialintelligence.model.core.SearchContentModel">
+        select id, case #{1} when 'en' then name_en else name end as name,
+        case #{1} when 'en' then description_en else description end  as description
+        from material 
+        where case #{1} when 'en' then description_en like CONCAT('%',#{0},'%') else  description like CONCAT('%',#{0},'%') end
+    </select>
+    <select id="searchSystem" resultType="com.artificialintelligence.model.core.SearchContentModel">
+        select id, case #{1} when 'en' then name_en else name end as name,
+        case #{1} when 'en' then description_en else description end as description
+        from systems 
+        where case #{1} when 'en' then description_en like CONCAT('%',#{0},'%') else  description like CONCAT('%',#{0},'%') end
+    </select> 
+</mapper>

@@ -35,8 +35,8 @@ public class ArtificialIntelligentController extends BaseController{
 	public String getCategory(Map<String, Object> map, HttpServletRequest request, HttpServletResponse response) {
 		
 		List<CategoryModel>  categoryList =  new ArrayList<CategoryModel>();
-		HttpSession session = request.getSession(); 
-		String lang = (String) session.getAttribute("lang"); 
+		HttpSession session = request.getSession();
+		String lang = (String) session.getAttribute("lang");
 		categoryList = categoryService.getCategory(lang);
 		request.setAttribute("categoryList", categoryList);
 		return "artificialintelligent";

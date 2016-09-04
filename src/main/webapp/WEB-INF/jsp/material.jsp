@@ -37,7 +37,6 @@ pageContext.setAttribute("basePath",basePath);
 			<div id="view">评论你的观点：</div>
 			<form id="submit_form">
 	            <textarea name="editor" id="editor" rows="10" cols="80">
-	                This is my textarea to be replaced with CKEditor.
 	            </textarea> 
 	            <input type="submit" value="提交" class="submit_btn" id="materialsubmit"/>
 	        </form>
@@ -62,7 +61,7 @@ pageContext.setAttribute("basePath",basePath);
     	            evt.preventDefault();
     	            var comment = CKEDITOR.instances.editor.getData();
     	            // Post the data to the server
-    	            request.post("${basePath}insertComment/${material.id}.do", {
+    	            request.post("${basePath}material/insertcomment/${material.id}.do", {
     	                // Send the username and password
     	                data: {
     	                	comment:comment,

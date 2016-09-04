@@ -13,7 +13,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.artificialintelligence.core.service.CommentService;
@@ -49,7 +48,7 @@ public class ArticleController extends BaseController{
 		
 	}
 	
-	@RequestMapping(value="/insertComment/{id}", method=RequestMethod.POST)
+	@RequestMapping(value="/insertcomment/{id}", method=RequestMethod.POST)
 	@ResponseBody
 	public Result<List<CommentModel>> insertComment(Map<String, Object> map, @PathVariable("id") Integer id, HttpServletRequest request,HttpServletResponse response) {
 		

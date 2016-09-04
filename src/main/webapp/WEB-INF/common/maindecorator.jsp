@@ -49,9 +49,10 @@ var dojoConfig = {
 	         "dojo/i18n!locale/label/nls/material",
 	         "dojo/i18n!locale/label/nls/registersuccess",
 	         "dojo/i18n!locale/label/nls/system",
+	         "dojo/i18n!locale/label/nls/searchtype",
 	         "dojo/dom-style", "dojo/dom"],  
 	         function(i18nmaindecorator,i18nregister,i18nlogin,i18nalgorithm,i18narticle,
-	        		 i18nartificialintelligent,i18ncategory,i18nmaterial,i18nregistersuccess,i18nsystem,style,dom){
+	        		 i18nartificialintelligent,i18ncategory,i18nmaterial,i18nregistersuccess,i18nsystem,i18nsearchtype,style,dom){
 		localization(i18nmaindecorator);
 		localization(i18nregister);
 		localization(i18nlogin);
@@ -62,6 +63,7 @@ var dojoConfig = {
 		localization(i18nmaterial);
 		localization(i18nregistersuccess);
 		localization(i18nsystem);
+		localization(i18nsearchtype);
 		
 		 var username="${username}"; 
 		 var islogin = "${islogin}";
@@ -79,6 +81,7 @@ var dojoConfig = {
 			 logout.style.display = "none";
 		 }
 	});
+	
 </script>
 </head>
 <body  class="claro">
@@ -101,10 +104,17 @@ var dojoConfig = {
 		      	<li><a href="${basePath}artificialintelligent/getcategory.do" id="homepage">主页</a></li>
 		      </ul>
 		      <form class="navbar-form navbar-left" role="search">
-		 		<div class="form-group">
-		   			<input type="text" class="form-control"  id="search" value="搜索">
-		 		</div>
-		 		<button type="submit" class="btn btn-default" id="submit">提交</button>
+		        <div class="input-group">
+			      <input type="text" class="form-control" aria-label="搜索" id="search">
+			      <div class="input-group-btn">
+			        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span id="mtype">类型</span> <span class="caret"></span></button>
+			        <ul class="dropdown-menu dropdown-menu-right">
+			         <li><a href="javascript:void(0);" onclick="searchtype('1');" id="marticle">文章</a></li>
+			         <li><a href="javascript:void(0);" onclick="searchtype('2');" id="mmaterial">材料</a></li>
+			         <li><a href="javascript:void(0);" onclick="searchtype('3');" id="msystem">系统</a></li>
+			        </ul>
+			      </div><!-- /btn-group -->
+			    </div><!-- /input-group -->
 			  </form>
 		      <ul class="nav navbar-nav navbar-right">
 		        <li><a href="${basePath}register/register.do" id="register">注册</a></li>
